@@ -34,6 +34,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    [self performSegueWithIdentifier:@"login" sender:self];
+    
 }
 -(IBAction)btnClicked:(id)sender
 {

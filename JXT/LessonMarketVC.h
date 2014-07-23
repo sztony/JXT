@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LessonMarketVC : UIViewController
+#import "BaseVC.h"
+@interface LessonMarketVC :BaseVC
 
 @end

@@ -26,6 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [segment setTitleArray:@[@"高中老师",@"初中老师",@"小学老师"]];
+    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
+    segment.currentSelectedIndex=1;
     // Do any additional setup after loading the view.
 }
 

@@ -54,6 +54,20 @@
 		D0613251197A72DE00052FDC /* shopCart.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613247197A72DE00052FDC /* shopCart.png */; };
 		D0613252197A72DE00052FDC /* tradeList.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613248197A72DE00052FDC /* tradeList.png */; };
 		D0613253197A72DE00052FDC /* userInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613249197A72DE00052FDC /* userInfo.png */; };
+		D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD7D197EB10800733568 /* SearchViewController.m */; };
+		D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD85197EBBFB00733568 /* BaseVC.m */; };
+		D0E1CD88197EBBFB00733568 /* BaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E1CD86197EBBFB00733568 /* BaseVC.xib */; };
+		D0E255C4197F450B00F45365 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255C3197F450B00F45365 /* WBSegment.m */; };
+		D0E255CD197F60A300F45365 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C6197F60A300F45365 /* loginBack.png */; };
+		D0E255CE197F60A300F45365 /* passwordIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C7197F60A300F45365 /* passwordIcon.png */; };
+		D0E255CF197F60A300F45365 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C8197F60A300F45365 /* register.png */; };
+		D0E255D0197F60A300F45365 /* registerEnd.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C9197F60A300F45365 /* registerEnd.png */; };
+		D0E255D1197F60A300F45365 /* registerNext.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255CA197F60A300F45365 /* registerNext.png */; };
+		D0E255D2197F60A300F45365 /* textBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255CB197F60A300F45365 /* textBack.png */; };
+		D0E255D3197F60A300F45365 /* userNameIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255CC197F60A300F45365 /* userNameIcon.png */; };
+		D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D6197F6AD000F45365 /* LoginVC.m */; };
+		D0E255DA197F831500F45365 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D9197F831500F45365 /* RegisterVC.m */; };
+		D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255DC197F832900F45365 /* FindPasswordVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +140,26 @@
 		D0613247197A72DE00052FDC /* shopCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopCart.png; sourceTree = "<group>"; };
 		D0613248197A72DE00052FDC /* tradeList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeList.png; sourceTree = "<group>"; };
 		D0613249197A72DE00052FDC /* userInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userInfo.png; sourceTree = "<group>"; };
+		D0E1CD7C197EB10800733568 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		D0E1CD7D197EB10800733568 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		D0E1CD84197EBBFB00733568 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		D0E1CD85197EBBFB00733568 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		D0E1CD86197EBBFB00733568 /* BaseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseVC.xib; sourceTree = "<group>"; };
+		D0E255C2197F450B00F45365 /* WBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSegment.h; sourceTree = "<group>"; };
+		D0E255C3197F450B00F45365 /* WBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSegment.m; sourceTree = "<group>"; };
+		D0E255C6197F60A300F45365 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
+		D0E255C7197F60A300F45365 /* passwordIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passwordIcon.png; sourceTree = "<group>"; };
+		D0E255C8197F60A300F45365 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
+		D0E255C9197F60A300F45365 /* registerEnd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registerEnd.png; sourceTree = "<group>"; };
+		D0E255CA197F60A300F45365 /* registerNext.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = registerNext.png; sourceTree = "<group>"; };
+		D0E255CB197F60A300F45365 /* textBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textBack.png; sourceTree = "<group>"; };
+		D0E255CC197F60A300F45365 /* userNameIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userNameIcon.png; sourceTree = "<group>"; };
+		D0E255D5197F6AD000F45365 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		D0E255D6197F6AD000F45365 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		D0E255D8197F831500F45365 /* RegisterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterVC.h; sourceTree = "<group>"; };
+		D0E255D9197F831500F45365 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
+		D0E255DB197F832900F45365 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
+		D0E255DC197F832900F45365 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +189,7 @@
 		D0407E28197A1B1200894414 = {
 			isa = PBXGroup;
 			children = (
+				D0E255C1197F450B00F45365 /* Library */,
 				D0407E69197A207700894414 /* Images */,
 				D0407E3A197A1B1200894414 /* JXT */,
 				D0407E59197A1B1200894414 /* JXTTests */,
@@ -195,6 +230,7 @@
 				D0407E8A197A394900894414 /* RootTabBarController.m */,
 				D0407E8C197A482E00894414 /* BaseNavigationController.h */,
 				D0407E8D197A482E00894414 /* BaseNavigationController.m */,
+				D0E255D4197F6AB500F45365 /* Login */,
 				D0407E9F197A55E600894414 /* Home */,
 				D0407EA4197A565300894414 /* Message */,
 				D0407EA3197A563600894414 /* Search */,
@@ -237,6 +273,7 @@
 		D0407E69197A207700894414 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D0E255C5197F609800F45365 /* Login&Register */,
 				D0407E6A197A20E800894414 /* Global */,
 				D0407E6B197A20E800894414 /* Home */,
 				D0407E6C197A20E800894414 /* Message */,
@@ -312,6 +349,9 @@
 			children = (
 				D0407EA0197A562600894414 /* HomeVC.h */,
 				D0407EA1197A562600894414 /* HomeVC.m */,
+				D0E1CD84197EBBFB00733568 /* BaseVC.h */,
+				D0E1CD85197EBBFB00733568 /* BaseVC.m */,
+				D0E1CD86197EBBFB00733568 /* BaseVC.xib */,
 				D0407EA6197A56D600894414 /* MyLessonVC.h */,
 				D0407EA7197A56D600894414 /* MyLessonVC.m */,
 				D0407EA9197A56EE00894414 /* LessonMarketVC.h */,
@@ -325,6 +365,8 @@
 		D0407EA3197A563600894414 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				D0E1CD7C197EB10800733568 /* SearchViewController.h */,
+				D0E1CD7D197EB10800733568 /* SearchViewController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -343,6 +385,42 @@
 				D0407EB0197A6E6A00894414 /* SettingsVC.m */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		D0E255C1197F450B00F45365 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D0E255C2197F450B00F45365 /* WBSegment.h */,
+				D0E255C3197F450B00F45365 /* WBSegment.m */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		D0E255C5197F609800F45365 /* Login&Register */ = {
+			isa = PBXGroup;
+			children = (
+				D0E255C6197F60A300F45365 /* loginBack.png */,
+				D0E255C7197F60A300F45365 /* passwordIcon.png */,
+				D0E255C8197F60A300F45365 /* register.png */,
+				D0E255C9197F60A300F45365 /* registerEnd.png */,
+				D0E255CA197F60A300F45365 /* registerNext.png */,
+				D0E255CB197F60A300F45365 /* textBack.png */,
+				D0E255CC197F60A300F45365 /* userNameIcon.png */,
+			);
+			path = "Login&Register";
+			sourceTree = "<group>";
+		};
+		D0E255D4197F6AB500F45365 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D0E255D5197F6AD000F45365 /* LoginVC.h */,
+				D0E255D6197F6AD000F45365 /* LoginVC.m */,
+				D0E255D8197F831500F45365 /* RegisterVC.h */,
+				D0E255D9197F831500F45365 /* RegisterVC.m */,
+				D0E255DB197F832900F45365 /* FindPasswordVC.h */,
+				D0E255DC197F832900F45365 /* FindPasswordVC.m */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,10 +501,13 @@
 			files = (
 				D0407E86197A26BD00894414 /* 设置1.png in Resources */,
 				D0407E7A197A257E00894414 /* 设置2.png in Resources */,
+				D0E255D3197F60A300F45365 /* userNameIcon.png in Resources */,
 				D0407E93197A4C8800894414 /* detail.png in Resources */,
 				D061324F197A72DE00052FDC /* myNotice.png in Resources */,
 				D0407E4D197A1B1200894414 /* Images.xcassets in Resources */,
+				D0E255D1197F60A300F45365 /* registerNext.png in Resources */,
 				D061324B197A72DE00052FDC /* cards.png in Resources */,
+				D0E255D0197F60A300F45365 /* registerEnd.png in Resources */,
 				D0407E9C197A4CA100894414 /* 模块背景.png in Resources */,
 				D0613250197A72DE00052FDC /* settings_settings.png in Resources */,
 				D0407E94197A4C8800894414 /* menu.png in Resources */,
@@ -434,10 +515,13 @@
 				D0613251197A72DE00052FDC /* shopCart.png in Resources */,
 				D0613253197A72DE00052FDC /* userInfo.png in Resources */,
 				D0407E3F197A1B1200894414 /* InfoPlist.strings in Resources */,
+				D0E255CD197F60A300F45365 /* loginBack.png in Resources */,
 				D061324A197A72DE00052FDC /* addressList.png in Resources */,
 				D061324E197A72DE00052FDC /* myClass.png in Resources */,
+				D0E255CF197F60A300F45365 /* register.png in Resources */,
 				D0407E88197A26BD00894414 /* 首页1.png in Resources */,
 				D0407E83197A26BD00894414 /* 搜索1.png in Resources */,
+				D0E255D2197F60A300F45365 /* textBack.png in Resources */,
 				D0407E7C197A25A600894414 /* 消息2.png in Resources */,
 				D0407E90197A4C2200894414 /* logo.png in Resources */,
 				D061324C197A72DE00052FDC /* charger.png in Resources */,
@@ -448,8 +532,10 @@
 				D0407E9B197A4CA100894414 /* 我的课程.png in Resources */,
 				D0613252197A72DE00052FDC /* tradeList.png in Resources */,
 				D0407E9E197A4D2D00894414 /* banner.png in Resources */,
+				D0E1CD88197EBBFB00733568 /* BaseVC.xib in Resources */,
 				D061324D197A72DE00052FDC /* defaultUser.png in Resources */,
 				D0407E84197A26BD00894414 /* 搜索2.png in Resources */,
+				D0E255CE197F60A300F45365 /* passwordIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,12 +557,18 @@
 				D0407E4B197A1B1200894414 /* ViewController.m in Sources */,
 				D0407EB1197A6E6A00894414 /* SettingsVC.m in Sources */,
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
+				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
 				D0407E45197A1B1200894414 /* AppDelegate.m in Sources */,
 				D0407EA2197A562600894414 /* HomeVC.m in Sources */,
+				D0E255C4197F450B00F45365 /* WBSegment.m in Sources */,
+				D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */,
 				D0407EAB197A56EE00894414 /* LessonMarketVC.m in Sources */,
 				D0407E41197A1B1200894414 /* main.m in Sources */,
+				D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */,
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
+				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
+				D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */,
 				D0407E8E197A482E00894414 /* BaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +694,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
@@ -615,6 +708,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";

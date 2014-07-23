@@ -1,18 +1,18 @@
 //
-//  LessonMarketVC.m
+//  LoginVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-19.
+//  Created by 伍 兵 on 14-7-23.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "LessonMarketVC.h"
+#import "LoginVC.h"
 
-@interface LessonMarketVC ()
+@interface LoginVC ()
 
 @end
 
-@implementation LessonMarketVC
+@implementation LoginVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,16 +22,22 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden=YES;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [segment setTitleArray:@[@"微课课程",@"名师课程"]];
-    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
-    segment.currentSelectedIndex=1;
+    //self.navigationController.navigationBar.hidden=YES;
     // Do any additional setup after loading the view.
 }
-
+-(IBAction)loginBtnClicked:(id)sender
+{
+    [self  dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

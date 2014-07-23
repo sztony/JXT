@@ -1,18 +1,18 @@
 //
-//  LessonMarketVC.m
+//  SearchViewController.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-19.
+//  Created by 伍 兵 on 14-7-22.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "LessonMarketVC.h"
+#import "SearchViewController.h"
 
-@interface LessonMarketVC ()
+@interface SearchViewController ()
 
 @end
 
-@implementation LessonMarketVC
+@implementation SearchViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,11 +26,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [segment setTitleArray:@[@"微课课程",@"名师课程"]];
-    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
-    segment.currentSelectedIndex=1;
+    NSLog(@"scope titles:%@", searchBar.scopeButtonTitles);
     // Do any additional setup after loading the view.
 }
+
+#pragma mark - UISearchBar delegate
+-(void)searchBarSearchButtonClicked:(UISearchBar *)aSearchBar
+{
+    NSLog(@"start search!");
+    [aSearchBar resignFirstResponder];
+}
+-(void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope
+{
+    NSLog(@"selected:%d",selectedScope);
+}
+
+
+
 
 - (void)didReceiveMemoryWarning
 {

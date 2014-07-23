@@ -1,18 +1,18 @@
 //
-//  LessonMarketVC.m
+//  RegisterVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-19.
+//  Created by 伍 兵 on 14-7-23.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "LessonMarketVC.h"
+#import "RegisterVC.h"
 
-@interface LessonMarketVC ()
+@interface RegisterVC ()
 
 @end
 
-@implementation LessonMarketVC
+@implementation RegisterVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,9 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [segment setTitleArray:@[@"微课课程",@"名师课程"]];
-    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
-    segment.currentSelectedIndex=1;
+    self.navigationController.navigationBar.hidden=NO;
+    self.title=@"免费注册";
     // Do any additional setup after loading the view.
 }
 
