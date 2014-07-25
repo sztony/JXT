@@ -1,24 +1,24 @@
 //
-//  SettingsVC.m
+//  PersonalVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-19.
+//  Created by CW on 14-7-22.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "SettingsVC.h"
 #import "PersonalVC.h"
-@interface SettingsVC ()
+
+@interface PersonalVC ()
 
 @end
 
-@implementation SettingsVC
-
+@implementation PersonalVC
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+     
     }
     return self;
 }
@@ -26,38 +26,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.tableView.delegate=self;
+
     // Do any additional setup after loading the view.
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    switch (indexPath.section) {
-        case 0:
-        {
 
-        }
-            break;
-        case 1:
-        {
-            
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
-    NSLog(@"indexpath:%d",indexPath.row);
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

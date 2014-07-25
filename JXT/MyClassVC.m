@@ -1,18 +1,18 @@
 //
-//  SettingsVC.m
+//  MyClassVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-19.
+//  Created by 伍 兵 on 14-7-25.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "SettingsVC.h"
-#import "PersonalVC.h"
-@interface SettingsVC ()
+#import "MyClassVC.h"
+
+@interface MyClassVC ()
 
 @end
 
-@implementation SettingsVC
+@implementation MyClassVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,38 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.tableView.delegate=self;
+    
+    segment.center=CGPointMake(segment.center.x, segment.center.y+40);
+    [segment setTitleArray:@[@"班级公告",@"班级成员"]];
+    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
+    segment.currentSelectedIndex=1;
     // Do any additional setup after loading the view.
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    switch (indexPath.section) {
-        case 0:
-        {
 
-        }
-            break;
-        case 1:
-        {
-            
-        }
-            break;
-        case 2:
-        {
-            
-        }
-            break;
-        case 3:
-        {
-            
-        }
-            break;
-            
-        default:
-            break;
-    }
-    NSLog(@"indexpath:%d",indexPath.row);
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

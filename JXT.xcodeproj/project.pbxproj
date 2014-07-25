@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C00317A0197F8F3F0072551F /* PersonalVC.m */; };
 		D0407E35197A1B1200894414 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0407E34197A1B1200894414 /* Foundation.framework */; };
 		D0407E37197A1B1200894414 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0407E36197A1B1200894414 /* CoreGraphics.framework */; };
 		D0407E39197A1B1200894414 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0407E38197A1B1200894414 /* UIKit.framework */; };
@@ -54,6 +55,8 @@
 		D0613251197A72DE00052FDC /* shopCart.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613247197A72DE00052FDC /* shopCart.png */; };
 		D0613252197A72DE00052FDC /* tradeList.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613248197A72DE00052FDC /* tradeList.png */; };
 		D0613253197A72DE00052FDC /* userInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613249197A72DE00052FDC /* userInfo.png */; };
+		D0CE14AB1981EC5F00ED77E0 /* MyClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */; };
+		D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AD1982239D00ED77E0 /* MessageVC.m */; };
 		D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD7D197EB10800733568 /* SearchViewController.m */; };
 		D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD85197EBBFB00733568 /* BaseVC.m */; };
 		D0E1CD88197EBBFB00733568 /* BaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E1CD86197EBBFB00733568 /* BaseVC.xib */; };
@@ -81,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C003179F197F8F3F0072551F /* PersonalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalVC.h; sourceTree = "<group>"; };
+		C00317A0197F8F3F0072551F /* PersonalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalVC.m; sourceTree = "<group>"; };
 		D0407E31197A1B1200894414 /* JXT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0407E34197A1B1200894414 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0407E36197A1B1200894414 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +145,10 @@
 		D0613247197A72DE00052FDC /* shopCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopCart.png; sourceTree = "<group>"; };
 		D0613248197A72DE00052FDC /* tradeList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeList.png; sourceTree = "<group>"; };
 		D0613249197A72DE00052FDC /* userInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userInfo.png; sourceTree = "<group>"; };
+		D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClassVC.h; sourceTree = "<group>"; };
+		D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClassVC.m; sourceTree = "<group>"; };
+		D0CE14AC1982239D00ED77E0 /* MessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
+		D0CE14AD1982239D00ED77E0 /* MessageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageVC.m; sourceTree = "<group>"; };
 		D0E1CD7C197EB10800733568 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		D0E1CD7D197EB10800733568 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D0E1CD84197EBBFB00733568 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
@@ -374,6 +383,8 @@
 		D0407EA4197A565300894414 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE14AC1982239D00ED77E0 /* MessageVC.h */,
+				D0CE14AD1982239D00ED77E0 /* MessageVC.m */,
 			);
 			name = Message;
 			sourceTree = "<group>";
@@ -383,6 +394,10 @@
 			children = (
 				D0407EAF197A6E6A00894414 /* SettingsVC.h */,
 				D0407EB0197A6E6A00894414 /* SettingsVC.m */,
+				C003179F197F8F3F0072551F /* PersonalVC.h */,
+				C00317A0197F8F3F0072551F /* PersonalVC.m */,
+				D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */,
+				D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -555,6 +570,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0407E4B197A1B1200894414 /* ViewController.m in Sources */,
+				D0CE14AB1981EC5F00ED77E0 /* MyClassVC.m in Sources */,
+				D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */,
 				D0407EB1197A6E6A00894414 /* SettingsVC.m in Sources */,
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
 				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
@@ -568,6 +585,7 @@
 				D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */,
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
+				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
 				D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */,
 				D0407E8E197A482E00894414 /* BaseNavigationController.m in Sources */,
 			);
@@ -695,10 +713,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Visionet Information Technology Co., Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8A1D3ECA-E403-4834-A53C-AE31BE8FE633";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -709,10 +729,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Visionet Information Technology Co., Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8A1D3ECA-E403-4834-A53C-AE31BE8FE633";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
