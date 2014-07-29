@@ -55,12 +55,16 @@
 		D0613251197A72DE00052FDC /* shopCart.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613247197A72DE00052FDC /* shopCart.png */; };
 		D0613252197A72DE00052FDC /* tradeList.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613248197A72DE00052FDC /* tradeList.png */; };
 		D0613253197A72DE00052FDC /* userInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613249197A72DE00052FDC /* userInfo.png */; };
+		D0CC0AEE1987D2CD002595F8 /* FulFillInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */; };
+		D0CC0AF21987D3DE002595F8 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF11987D3DE002595F8 /* WBSegment.m */; };
+		D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF51987D474002595F8 /* WBCheckBox.m */; };
+		D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF81987D474002595F8 /* WBCombList.m */; };
+		D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */; };
 		D0CE14AB1981EC5F00ED77E0 /* MyClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */; };
 		D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AD1982239D00ED77E0 /* MessageVC.m */; };
 		D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD7D197EB10800733568 /* SearchViewController.m */; };
 		D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD85197EBBFB00733568 /* BaseVC.m */; };
 		D0E1CD88197EBBFB00733568 /* BaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E1CD86197EBBFB00733568 /* BaseVC.xib */; };
-		D0E255C4197F450B00F45365 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255C3197F450B00F45365 /* WBSegment.m */; };
 		D0E255CD197F60A300F45365 /* loginBack.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C6197F60A300F45365 /* loginBack.png */; };
 		D0E255CE197F60A300F45365 /* passwordIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C7197F60A300F45365 /* passwordIcon.png */; };
 		D0E255CF197F60A300F45365 /* register.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E255C8197F60A300F45365 /* register.png */; };
@@ -145,6 +149,17 @@
 		D0613247197A72DE00052FDC /* shopCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopCart.png; sourceTree = "<group>"; };
 		D0613248197A72DE00052FDC /* tradeList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeList.png; sourceTree = "<group>"; };
 		D0613249197A72DE00052FDC /* userInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userInfo.png; sourceTree = "<group>"; };
+		D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FulFillInfoVC.h; sourceTree = "<group>"; };
+		D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FulFillInfoVC.m; sourceTree = "<group>"; };
+		D0CC0AF01987D3DE002595F8 /* WBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSegment.h; sourceTree = "<group>"; };
+		D0CC0AF11987D3DE002595F8 /* WBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSegment.m; sourceTree = "<group>"; };
+		D0CC0AF41987D474002595F8 /* WBCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCheckBox.h; sourceTree = "<group>"; };
+		D0CC0AF51987D474002595F8 /* WBCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCheckBox.m; sourceTree = "<group>"; };
+		D0CC0AF71987D474002595F8 /* WBCombList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCombList.h; sourceTree = "<group>"; };
+		D0CC0AF81987D474002595F8 /* WBCombList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCombList.m; sourceTree = "<group>"; };
+		D0CC0AFB1987E312002595F8 /* APPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
+		D0CC0AFC1987F37D002595F8 /* GlobalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDataManager.h; sourceTree = "<group>"; };
+		D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDataManager.m; sourceTree = "<group>"; };
 		D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClassVC.h; sourceTree = "<group>"; };
 		D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClassVC.m; sourceTree = "<group>"; };
 		D0CE14AC1982239D00ED77E0 /* MessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
@@ -154,8 +169,6 @@
 		D0E1CD84197EBBFB00733568 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
 		D0E1CD85197EBBFB00733568 /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		D0E1CD86197EBBFB00733568 /* BaseVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseVC.xib; sourceTree = "<group>"; };
-		D0E255C2197F450B00F45365 /* WBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSegment.h; sourceTree = "<group>"; };
-		D0E255C3197F450B00F45365 /* WBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSegment.m; sourceTree = "<group>"; };
 		D0E255C6197F60A300F45365 /* loginBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginBack.png; sourceTree = "<group>"; };
 		D0E255C7197F60A300F45365 /* passwordIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passwordIcon.png; sourceTree = "<group>"; };
 		D0E255C8197F60A300F45365 /* register.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = register.png; sourceTree = "<group>"; };
@@ -230,11 +243,14 @@
 		D0407E3A197A1B1200894414 /* JXT */ = {
 			isa = PBXGroup;
 			children = (
+				D0CC0AFB1987E312002595F8 /* APPConfig.h */,
 				D0407E43197A1B1200894414 /* AppDelegate.h */,
 				D0407E44197A1B1200894414 /* AppDelegate.m */,
 				D0407E46197A1B1200894414 /* Main.storyboard */,
 				D0407E49197A1B1200894414 /* ViewController.h */,
 				D0407E4A197A1B1200894414 /* ViewController.m */,
+				D0CC0AFC1987F37D002595F8 /* GlobalDataManager.h */,
+				D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */,
 				D0407E89197A394900894414 /* RootTabBarController.h */,
 				D0407E8A197A394900894414 /* RootTabBarController.m */,
 				D0407E8C197A482E00894414 /* BaseNavigationController.h */,
@@ -402,11 +418,39 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		D0CC0AEF1987D3DE002595F8 /* WBSegment */ = {
+			isa = PBXGroup;
+			children = (
+				D0CC0AF01987D3DE002595F8 /* WBSegment.h */,
+				D0CC0AF11987D3DE002595F8 /* WBSegment.m */,
+			);
+			path = WBSegment;
+			sourceTree = "<group>";
+		};
+		D0CC0AF31987D474002595F8 /* WBCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				D0CC0AF41987D474002595F8 /* WBCheckBox.h */,
+				D0CC0AF51987D474002595F8 /* WBCheckBox.m */,
+			);
+			path = WBCheckBox;
+			sourceTree = "<group>";
+		};
+		D0CC0AF61987D474002595F8 /* WBCombList */ = {
+			isa = PBXGroup;
+			children = (
+				D0CC0AF71987D474002595F8 /* WBCombList.h */,
+				D0CC0AF81987D474002595F8 /* WBCombList.m */,
+			);
+			path = WBCombList;
+			sourceTree = "<group>";
+		};
 		D0E255C1197F450B00F45365 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				D0E255C2197F450B00F45365 /* WBSegment.h */,
-				D0E255C3197F450B00F45365 /* WBSegment.m */,
+				D0CC0AF31987D474002595F8 /* WBCheckBox */,
+				D0CC0AF61987D474002595F8 /* WBCombList */,
+				D0CC0AEF1987D3DE002595F8 /* WBSegment */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -430,10 +474,12 @@
 			children = (
 				D0E255D5197F6AD000F45365 /* LoginVC.h */,
 				D0E255D6197F6AD000F45365 /* LoginVC.m */,
-				D0E255D8197F831500F45365 /* RegisterVC.h */,
-				D0E255D9197F831500F45365 /* RegisterVC.m */,
 				D0E255DB197F832900F45365 /* FindPasswordVC.h */,
 				D0E255DC197F832900F45365 /* FindPasswordVC.m */,
+				D0E255D8197F831500F45365 /* RegisterVC.h */,
+				D0E255D9197F831500F45365 /* RegisterVC.m */,
+				D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */,
+				D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -570,15 +616,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0407E4B197A1B1200894414 /* ViewController.m in Sources */,
+				D0CC0AEE1987D2CD002595F8 /* FulFillInfoVC.m in Sources */,
 				D0CE14AB1981EC5F00ED77E0 /* MyClassVC.m in Sources */,
 				D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */,
 				D0407EB1197A6E6A00894414 /* SettingsVC.m in Sources */,
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
+				D0CC0AF21987D3DE002595F8 /* WBSegment.m in Sources */,
+				D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */,
 				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
+				D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */,
 				D0407E45197A1B1200894414 /* AppDelegate.m in Sources */,
 				D0407EA2197A562600894414 /* HomeVC.m in Sources */,
-				D0E255C4197F450B00F45365 /* WBSegment.m in Sources */,
 				D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */,
 				D0407EAB197A56EE00894414 /* LessonMarketVC.m in Sources */,
 				D0407E41197A1B1200894414 /* main.m in Sources */,
@@ -586,6 +635,7 @@
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
 				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
+				D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */,
 				D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */,
 				D0407E8E197A482E00894414 /* BaseNavigationController.m in Sources */,
 			);

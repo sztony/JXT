@@ -34,16 +34,65 @@
 }
 -(IBAction)loginBtnClicked:(id)sender
 {
-    [self  dismissViewControllerAnimated:YES completion:^{
+    //URL
+    NSURL * url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_Login]];
+    NSString* code=@"d3c6090d320b8b9e2a7fef7cbfc52ecf";
+   NSString* dataString = [NSString stringWithFormat:@"loginName=%@&password=%@&pwdmd5=%@",nameField.text,passwordField.text,code];
+    NSLog(@"dataString:%@",dataString);
+    //请求
+    NSMutableURLRequest* request=[NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"POST"];//请求类型
+    [request setHTTPBody:[dataString dataUsingEncoding:NSUTF8StringEncoding]];
+    //连接
+    [NSURLConnection sendAsynchronousRequest:request queue:[[GlobalDataManager sharedDataManager] globalTaskQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSLog(@"error:%@",connectionError);
+        NSLog(@"string:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        //成功
+        if(!connectionError)
+        {
+            NSError* error=nil;
+            NSDictionary * dict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            NSLog(@"dict:%@",dict);
+            if(!error)
+            {
+                NSString* msg=[dict objectForKey:@"msg"];
+                //NSLog(@"msg:%@")
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    statusLabel.text=msg;
+                });
+                NSString* msgCode=[dict objectForKey:@"msgcode"];
+                NSDictionary* userInfoDict=[dict objectForKey:@"result"];
+                BOOL status=[[dict valueForKey:@"success"] boolValue];
+                if(status&&[msg isEqualToString:@"登录成功"])
+                {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self dismissViewControllerAnimated:YES completion:^{
+                        }];
+                    });
+                }
+                
+            }
+            else
+            {
+                NSLog(@"login parse error:%@",error);
+            }
+          
+        }
         
     }];
+    
+//
 }
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [nameField resignFirstResponder];
+    [passwordField resignFirstResponder];
+}
 /*
 #pragma mark - Navigation
 

@@ -14,5 +14,6 @@
     
     IBOutlet UITextField * nameField;
     IBOutlet UITextField * passwordField;
+    IBOutlet UILabel* statusLabel;
 }
 @end
