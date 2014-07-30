@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBCombListHeader.h"
+
 
 #define   ANIMATE_SELECT 0
 #define  COMB_MASK_COLOR [UIColor colorWithWhite:0.4 alpha:0.4];

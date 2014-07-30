@@ -78,6 +78,14 @@
             }
           
         }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                statusLabel.text=@"连接失败!";
+                [self dismissViewControllerAnimated:YES completion:^{
+                }];
+            });
+        }
         
     }];
     
@@ -88,11 +96,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [nameField resignFirstResponder];
-    [passwordField resignFirstResponder];
-}
+
 /*
 #pragma mark - Navigation
 

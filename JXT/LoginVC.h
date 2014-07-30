@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginVC : UIViewController
+#import "LoginBaseVC.h"
+@interface LoginVC :LoginBaseVC
 {
   IBOutlet UIButton* loginBtn;
     

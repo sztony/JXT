@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "WBSegment.h"
-@interface BaseVC : UIViewController<WBSegmentDelegate>
+#import "WBCombList.h"
+@interface BaseVC : UIViewController<WBSegmentDelegate,WBCombListDelegate>
 {
     WBSegment * segment;
+    IBOutlet  WBCombListHeader * header1;
+    IBOutlet  WBCombListHeader * header2;
+    IBOutlet  WBCombListHeader * header3;
+
+    
 }
+-(void)refreshHeader;
+-(void)headerClicked:(WBCombListHeader*)aHeader;
+@property(nonatomic,retain) NSMutableArray* headerTitleArray;
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FindPasswordVC : UIViewController
-
+#import "LoginBaseVC.h"
+@interface FindPasswordVC : LoginBaseVC
+{
+    IBOutlet UILabel* statusLabel1;
+    IBOutlet UILabel* statusLabel2;
+    IBOutlet UITextField * acountField;
+}
 @end

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FulFillInfoVC : UIViewController
+#import "LoginBaseVC.h"
+@interface FulFillInfoVC : LoginBaseVC
 
 @end

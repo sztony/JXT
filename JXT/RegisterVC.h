@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface RegisterVC : UIViewController
-
+#import "LoginBaseVC.h"
+@interface RegisterVC : LoginBaseVC
+{
+    IBOutlet UITextField * nameField;
+    IBOutlet UITextField * passwordField;
+    IBOutlet UITextField * phoneNumField;
+    IBOutlet UITextField * vertifyNumField;
+}
 @end
