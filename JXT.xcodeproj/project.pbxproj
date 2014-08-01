@@ -55,12 +55,13 @@
 		D0613251197A72DE00052FDC /* shopCart.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613247197A72DE00052FDC /* shopCart.png */; };
 		D0613252197A72DE00052FDC /* tradeList.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613248197A72DE00052FDC /* tradeList.png */; };
 		D0613253197A72DE00052FDC /* userInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = D0613249197A72DE00052FDC /* userInfo.png */; };
+		D0C076AE19893518004CB68D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C076AD19893518004CB68D /* NSString+MD5.m */; };
 		D0C7043619885D9B00EB4426 /* LoginBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7043519885D9B00EB4426 /* LoginBaseVC.m */; };
 		D0CC0AEE1987D2CD002595F8 /* FulFillInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */; };
-		D0CC0AF21987D3DE002595F8 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF11987D3DE002595F8 /* WBSegment.m */; };
 		D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF51987D474002595F8 /* WBCheckBox.m */; };
 		D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF81987D474002595F8 /* WBCombList.m */; };
 		D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */; };
+		D0CE13AF198A0609002FA3A3 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE13AE198A0609002FA3A3 /* WBSegment.m */; };
 		D0CE14AB1981EC5F00ED77E0 /* MyClassVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */; };
 		D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AD1982239D00ED77E0 /* MessageVC.m */; };
 		D0CFF19D1988BB8800A6ABF2 /* WBCombListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CFF19C1988BB8800A6ABF2 /* WBCombListHeader.m */; };
@@ -78,6 +79,7 @@
 		D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D6197F6AD000F45365 /* LoginVC.m */; };
 		D0E255DA197F831500F45365 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D9197F831500F45365 /* RegisterVC.m */; };
 		D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255DC197F832900F45365 /* FindPasswordVC.m */; };
+		D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,12 +154,12 @@
 		D0613247197A72DE00052FDC /* shopCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopCart.png; sourceTree = "<group>"; };
 		D0613248197A72DE00052FDC /* tradeList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tradeList.png; sourceTree = "<group>"; };
 		D0613249197A72DE00052FDC /* userInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = userInfo.png; sourceTree = "<group>"; };
+		D0C076AC19893518004CB68D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		D0C076AD19893518004CB68D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		D0C7043419885D9B00EB4426 /* LoginBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginBaseVC.h; sourceTree = "<group>"; };
 		D0C7043519885D9B00EB4426 /* LoginBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginBaseVC.m; sourceTree = "<group>"; };
 		D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FulFillInfoVC.h; sourceTree = "<group>"; };
 		D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FulFillInfoVC.m; sourceTree = "<group>"; };
-		D0CC0AF01987D3DE002595F8 /* WBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSegment.h; sourceTree = "<group>"; };
-		D0CC0AF11987D3DE002595F8 /* WBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSegment.m; sourceTree = "<group>"; };
 		D0CC0AF41987D474002595F8 /* WBCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCheckBox.h; sourceTree = "<group>"; };
 		D0CC0AF51987D474002595F8 /* WBCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCheckBox.m; sourceTree = "<group>"; };
 		D0CC0AF71987D474002595F8 /* WBCombList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCombList.h; sourceTree = "<group>"; };
@@ -165,6 +167,8 @@
 		D0CC0AFB1987E312002595F8 /* APPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
 		D0CC0AFC1987F37D002595F8 /* GlobalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDataManager.h; sourceTree = "<group>"; };
 		D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDataManager.m; sourceTree = "<group>"; };
+		D0CE13AD198A0609002FA3A3 /* WBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBSegment.h; sourceTree = "<group>"; };
+		D0CE13AE198A0609002FA3A3 /* WBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBSegment.m; sourceTree = "<group>"; };
 		D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClassVC.h; sourceTree = "<group>"; };
 		D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClassVC.m; sourceTree = "<group>"; };
 		D0CE14AC1982239D00ED77E0 /* MessageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageVC.h; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		D0E255D9197F831500F45365 /* RegisterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterVC.m; sourceTree = "<group>"; };
 		D0E255DB197F832900F45365 /* FindPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordVC.h; sourceTree = "<group>"; };
 		D0E255DC197F832900F45365 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
+		D0E34176198B1CE7009DEBF1 /* WBHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHTTPRequest.h; sourceTree = "<group>"; };
+		D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHTTPRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,7 @@
 		D0407E3A197A1B1200894414 /* JXT */ = {
 			isa = PBXGroup;
 			children = (
+				D0C076AA198934E2004CB68D /* ClassExtensions */,
 				D0CC0AFB1987E312002595F8 /* APPConfig.h */,
 				D0407E43197A1B1200894414 /* AppDelegate.h */,
 				D0407E44197A1B1200894414 /* AppDelegate.m */,
@@ -427,11 +434,20 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		D0C076AA198934E2004CB68D /* ClassExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0C076AC19893518004CB68D /* NSString+MD5.h */,
+				D0C076AD19893518004CB68D /* NSString+MD5.m */,
+			);
+			name = ClassExtensions;
+			sourceTree = "<group>";
+		};
 		D0CC0AEF1987D3DE002595F8 /* WBSegment */ = {
 			isa = PBXGroup;
 			children = (
-				D0CC0AF01987D3DE002595F8 /* WBSegment.h */,
-				D0CC0AF11987D3DE002595F8 /* WBSegment.m */,
+				D0CE13AD198A0609002FA3A3 /* WBSegment.h */,
+				D0CE13AE198A0609002FA3A3 /* WBSegment.m */,
 			);
 			path = WBSegment;
 			sourceTree = "<group>";
@@ -459,6 +475,7 @@
 		D0E255C1197F450B00F45365 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D0E34175198B1CE7009DEBF1 /* WBHTTPRequest */,
 				D0CC0AF31987D474002595F8 /* WBCheckBox */,
 				D0CC0AF61987D474002595F8 /* WBCombList */,
 				D0CC0AEF1987D3DE002595F8 /* WBSegment */,
@@ -495,6 +512,15 @@
 				D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		D0E34175198B1CE7009DEBF1 /* WBHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				D0E34176198B1CE7009DEBF1 /* WBHTTPRequest.h */,
+				D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */,
+			);
+			path = WBHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,7 +661,6 @@
 				D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */,
 				D0407EB1197A6E6A00894414 /* SettingsVC.m in Sources */,
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
-				D0CC0AF21987D3DE002595F8 /* WBSegment.m in Sources */,
 				D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */,
 				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
@@ -647,8 +672,11 @@
 				D0407E41197A1B1200894414 /* main.m in Sources */,
 				D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */,
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
+				D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
 				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
+				D0C076AE19893518004CB68D /* NSString+MD5.m in Sources */,
+				D0CE13AF198A0609002FA3A3 /* WBSegment.m in Sources */,
 				D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */,
 				D0CFF19D1988BB8800A6ABF2 /* WBCombListHeader.m in Sources */,
 				D0C7043619885D9B00EB4426 /* LoginBaseVC.m in Sources */,
@@ -779,12 +807,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Visionet Information Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8A1D3ECA-E403-4834-A53C-AE31BE8FE633";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -795,12 +825,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Visionet Information Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8A1D3ECA-E403-4834-A53C-AE31BE8FE633";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

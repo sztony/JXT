@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "QuartzCore/QuartzCore.h"
+
+typedef enum
+{
+    kWBSegmentHorizonal,
+    kWBSegmentVertical
+}WBSegmentDirection;
+
+
 @class WBSegment;
 @protocol  WBSegmentDelegate<NSObject>
--(void)WBVerticalSegment:(WBSegment*)segment DidSelectedItemIndex:(NSInteger)index;
+-(void)WBSegment:(WBSegment*)segment DidSelectedItemIndex:(NSInteger)index;
 @end
 
 
@@ -24,11 +32,12 @@
     NSInteger currentSelectedIndex;
     UIColor * selectedColor;
     UIColor * normalColor;
-    BOOL isVertical;
+    WBSegmentDirection segmentDirection;
     id<WBSegmentDelegate> delegate;
 }
 - (id)initWithFrame:(CGRect)frame titleArray:(NSArray*)aTitleArray normalColor:(UIColor*)aNormalColor directionVertical:(BOOL)aIsVertical;
 -(void)setTitleArray:(NSArray*)aTitleArray;
+@property(nonatomic,assign)  WBSegmentDirection segmentDirection;
 @property(nonatomic,assign) NSInteger currentSelectedIndex;
 @property(nonatomic,assign) id<WBSegmentDelegate> delegate;
 @property(nonatomic,retain) UIColor * selectedColor;

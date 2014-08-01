@@ -32,11 +32,27 @@
     //self.navigationController.navigationBar.hidden=YES;
     // Do any additional setup after loading the view.
 }
+-(void)saveUserInfoDictWithDict:(NSDictionary*)aDict
+{
+    GlobalDataManager * m=[GlobalDataManager sharedDataManager];
+    
+    NSLog(@"aDict:%@",aDict);
+    
+    m.userID=[aDict objectForKey:@"userId"];
+    m.userMobile=[aDict objectForKey:@"mobile"];
+    m.userRealName=[aDict objectForKey:@"realName"];
+    m.userNickName=[aDict objectForKey:@"nickName"];
+    m.userSchoolName=[aDict objectForKey:@"schoolName"];
+    m.userPic=[aDict objectForKey:@"userPic"];
+    m.userBigPic=[aDict objectForKey:@"userBigPic"];
+    
+    NSLog(@"id:%@",m.userID);
+}
 -(IBAction)loginBtnClicked:(id)sender
 {
     //URL
     NSURL * url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_Login]];
-    NSString* code=@"d3c6090d320b8b9e2a7fef7cbfc52ecf";
+    NSString* code=[[NSString stringWithFormat:@"%@_%@_%@",nameField.text,passwordField.text,@"soshare_jxt"] MD5String];
    NSString* dataString = [NSString stringWithFormat:@"loginName=%@&password=%@&pwdmd5=%@",nameField.text,passwordField.text,code];
     NSLog(@"dataString:%@",dataString);
     //请求
@@ -60,8 +76,10 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     statusLabel.text=msg;
                 });
-                NSString* msgCode=[dict objectForKey:@"msgcode"];
-                NSDictionary* userInfoDict=[dict objectForKey:@"result"];
+                //NSString* msgCode=[dict objectForKey:@"msgcode"];
+                NSDictionary* userInfoDict=[[dict objectForKey:@"result"] objectForKey:@"userInfo"];
+                //保存用户数据
+                [self saveUserInfoDictWithDict:userInfoDict];
                 BOOL status=[[dict valueForKey:@"success"] boolValue];
                 if(status&&[msg isEqualToString:@"登录成功"])
                 {

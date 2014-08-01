@@ -9,7 +9,9 @@
 #import "PersonalVC.h"
 
 @interface PersonalVC ()
-
+{
+    GlobalDataManager* m;
+}
 @end
 
 @implementation PersonalVC
@@ -22,11 +24,25 @@
     }
     return self;
 }
-
+-(void)awakeFromNib
+{
+   
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    m = [GlobalDataManager sharedDataManager];
+    
+    NSLog(@"realName:%@",m.userRealName);
+    
+    
+    realNameLabel.text=@"asd ";
+    nickNameLabel.text=m.userNickName;
+    schoolLabel.text=m.userSchoolName;
+    mobileLabel.text=m.userMobile;
+    
+    NSLog(@"xx:%@",realNameLabel.text);
+    
     // Do any additional setup after loading the view.
 }
 

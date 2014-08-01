@@ -16,6 +16,7 @@
 
 @implementation BaseVC
 @synthesize headerTitleArray;
+@synthesize currentCombListItemArray;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,71 +30,77 @@
 {
     [super viewDidLoad];
     headerTitleArray=[[NSMutableArray alloc] initWithCapacity:3];
-    
-    
-    segment=[[WBSegment alloc] initWithFrame:CGRectMake(0, 64, 320, 50) titleArray:@[@"1",@"2"] normalColor:[UIColor whiteColor] directionVertical:NO];
-    segment.delegate=self;
-    [self.view addSubview:segment];
-    // Do any additional setup after loading the view from its nib.
+    currentCombListItemArray=[[NSMutableArray alloc] initWithCapacity:0];
+
 }
+//刷新二级标签标题
 -(void)refreshHeader
 {
+    
+#if 1
+        for(WBCombListHeader*  header in [self.view subviews])
+        {
+            if( [header isKindOfClass:[WBCombListHeader class]])
+            {
+                NSLog(@"yes:%d",header.tag);
+                [header addTarget:self action:@selector(headerClicked:) forControlEvents:UIControlEventTouchUpInside];
+                header.rightImage=[UIImage imageNamed:@"detailDown.png"];
+                [header setTitle:[self.headerTitleArray objectAtIndex:header.tag-1] forState:UIControlStateNormal];
+            }
+        }
+#else
+    //messageVC会出错
     for(int i=1;i<=self.headerTitleArray.count;i++)
     {
         NSString* title=[self.headerTitleArray objectAtIndex:i-1];
+        NSLog(@"title:%@",title);
         WBCombListHeader* header=(WBCombListHeader*) [self.view viewWithTag:i];
-        //[header setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [header addTarget:self action:@selector(headerClicked:) forControlEvents:UIControlEventTouchUpInside];
         header.rightImage=[UIImage imageNamed:@"detailDown.png"];
         [header setTitle:title forState:UIControlStateNormal];
+        //[header setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     }
+#endif
+        
+    
 }
--(void)WBVerticalSegment:(WBSegment *)aSegment DidSelectedItemIndex:(NSInteger)index
+//一级标签代理
+-(void)WBSegment:(WBSegment *)aSegment DidSelectedItemIndex:(NSInteger)index
 {
     NSLog(@"index:%d",index);
 }
+//二级标签事件函数
 -(void)headerClicked:(WBCombListHeader*)aHeader
 {
+    currentClickedHeader=aHeader;
      NSLog(@"seg:%d",segment.currentSelectedIndex);
     NSLog(@"tag:%d",aHeader.tag);
-    NSArray* array;
-    if(segment.currentSelectedIndex==1)
-    {
-        switch (aHeader.tag) {
-            case 1:
-                array=@[@"item1",@"item2",@"item3"];
-                break;
-            case 2:
-                array=@[@"item11",@"item22",@"item33"];
-                break;
-            default:
-                 array=@[@"item111",@"item222",@"item333"];
-                break;
-        }
-    }
-    else
-    {
-        switch (aHeader.tag) {
-            case 1:
-                array=@[@"item1",@"item2",@"item3"];
-                break;
-            case 2:
-                array=@[@"item11",@"item22",@"item33"];
-                break;
-            default:
-                array=@[@"item111",@"item222",@"item333"];
-                break;
-        }
-    }
-     [WBCombList  showInRect:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) edgeInset:UIEdgeInsetsMake(10, 20, 10, 20) delegate:self inView:self.view withTag:2];
-    
 }
+#pragma mark - CombList数据源
+//CombList数据源
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return currentCombListItemArray.count;
+}
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //子类自定义
+    return nil;
+}
+
+#pragma mark - WBCombListDelegate
+//combList代理
 -(void)combList:(WBCombList *)aCombList SelectedIndexPath:(NSIndexPath *)aIndexPath
 {
-    
+    NSLog(@"selectCombListRow:%d",aIndexPath.row);
 }
 -(void)dealloc
 {
+    [currentCombListItemArray release];
     [headerTitleArray release];
     [segment release];
     [super dealloc];

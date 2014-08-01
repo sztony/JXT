@@ -26,12 +26,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [segment setTitleArray:@[@"高中老师",@"初中老师",@"小学老师"]];
+    //一级标签
+    segment.normalColor=[UIColor whiteColor];
     segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
+    segment.delegate=self;
+    [segment setTitleArray:@[@"高中老师",@"初中老师",@"小学老师"]];
+    [segment setSegmentDirection:kWBSegmentHorizonal];
     segment.currentSelectedIndex=1;
+    
     // Do any additional setup after loading the view.
 }
-
+//复写一级标签代理
+-(void)WBSegment:(WBSegment *)aSegment DidSelectedItemIndex:(NSInteger)index
+{
+    [super WBSegment:aSegment DidSelectedItemIndex:index];
+    //自定义
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

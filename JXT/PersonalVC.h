@@ -10,5 +10,10 @@
 
 @interface PersonalVC : UITableViewController
 {
+    IBOutlet UIImageView* headImageView;
+    IBOutlet UILabel* realNameLabel;
+    IBOutlet UILabel* nickNameLabel;
+    IBOutlet UILabel* mobileLabel;
+    IBOutlet UILabel* schoolLabel;
 }
 @end

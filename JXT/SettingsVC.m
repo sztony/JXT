@@ -9,7 +9,9 @@
 #import "SettingsVC.h"
 #import "PersonalVC.h"
 @interface SettingsVC ()
-
+{
+    GlobalDataManager * m;
+}
 @end
 
 @implementation SettingsVC
@@ -27,6 +29,13 @@
 {
     [super viewDidLoad];
     //self.tableView.delegate=self;
+    m=[GlobalDataManager sharedDataManager];
+    
+    nameLabel.text=m.userRealName;
+    acountID.text=m.userMobile;
+    
+    
+    
     // Do any additional setup after loading the view.
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

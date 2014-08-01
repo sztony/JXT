@@ -12,4 +12,13 @@
 
 +(id)sharedDataManager;
 @property(nonatomic,retain) NSOperationQueue* globalTaskQueue;
+//全局用户属性
+@property(nonatomic,retain) NSString* userID;
+@property(nonatomic,retain) NSString* userMobile;
+@property(nonatomic,retain) NSString* userRealName;
+@property(nonatomic,retain) NSString* userNickName;
+@property(nonatomic,retain) NSString* userSchoolName;
+@property(nonatomic,retain) NSString* userPic;
+@property(nonatomic,retain) NSString* userBigPic;
+
 @end

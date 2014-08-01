@@ -48,6 +48,14 @@
 #define URL_UserPlayInfo   @"api/course/getUserPlayInfo"
 
 
+//本地化属性key
+//#define USER_Mobile @"userMobile"
+//#define USER_NickName @"userNickName"
+//#define USER_RealName @"userRealName"
+//#define USER_SchoolName @"userSchoolName"
+//#define USER_Id @"userID"
+//#define USER_Pic @"userPic"
+//#define USER_BigPic @"userBigPic"
 
 
 

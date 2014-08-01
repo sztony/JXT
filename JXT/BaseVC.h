@@ -9,16 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "WBSegment.h"
 #import "WBCombList.h"
-@interface BaseVC : UIViewController<WBSegmentDelegate,WBCombListDelegate>
+@interface BaseVC : UIViewController<WBSegmentDelegate,WBCombListDelegate,UITableViewDataSource,UITableViewDelegate>
 {
-    WBSegment * segment;
-    IBOutlet  WBCombListHeader * header1;
+    IBOutlet  WBSegment * segment;//一级标签
+    IBOutlet  WBCombListHeader * header1;//二级标签
     IBOutlet  WBCombListHeader * header2;
     IBOutlet  WBCombListHeader * header3;
 
+    WBCombListHeader* currentClickedHeader;
     
 }
 -(void)refreshHeader;
 -(void)headerClicked:(WBCombListHeader*)aHeader;
 @property(nonatomic,retain) NSMutableArray* headerTitleArray;
+@property(nonatomic,retain) NSMutableArray* currentCombListItemArray;
 @end

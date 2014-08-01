@@ -12,8 +12,8 @@
 
 #define   ANIMATE_SELECT 0
 #define  COMB_MASK_COLOR [UIColor colorWithWhite:0.4 alpha:0.4];
-#define  COMB_CONTENT_BACK_COLOR [UIColor colorWithRed:0.2 green:0.30 blue:0.4 alpha:0.8]
-#define  COMB_CONTENT_LIST_BACK_COLOR [UIColor colorWithRed:1 green:0.30 blue:0.4 alpha:0.8]
+#define  COMB_CONTENT_BACK_COLOR [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:0.8]
+#define  COMB_CONTENT_LIST_BACK_COLOR [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:0.8]
 
 
 @class CombContentListView;
