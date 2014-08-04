@@ -13,12 +13,24 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-#import "APPConfig.h"
-#import "GlobalDataManager.h"
-#import "NSString+MD5.h"
+    #import "APPConfig.h"
+    #import "GlobalDataManager.h"
+    #import "NSString+MD5.h"
+    #import "WBHTTPRequest.h"
 #endif
 
 
 #define MAIN_COLOR [UIColor cyanColor]
+#define MIAN_BACK_COLOR [UIColor colorWithRed:235/255.0 green:235/255.0 blue:242/255.0 alpha:1]
+
+#define IS_IOS_7 [[[UIDevice currentDevice] systemVersion] hasPrefix:@"7"]
+
+
+//使能
+#define USE_TEST_DATA 1
+
+
+//tag  define
+#define TAG_ContentTable 9
 
 

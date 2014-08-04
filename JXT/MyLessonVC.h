@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
+#import "SchoolLessonCustomCell.h"
+#import "MyLessonCustomCell.h"
+#import "HomeWorkTopView.h"
 @interface MyLessonVC : BaseVC
-
+{
+    
+}
 @end

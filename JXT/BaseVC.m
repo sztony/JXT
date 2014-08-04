@@ -15,8 +15,10 @@
 @end
 
 @implementation BaseVC
+@synthesize queue;
 @synthesize headerTitleArray;
 @synthesize currentCombListItemArray;
+@synthesize contentDataArray;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,12 +27,35 @@
     }
     return self;
 }
-
+-(void)dataInit
+{
+    headerTitleArray=[[NSMutableArray alloc] initWithCapacity:3];
+    currentCombListItemArray=[[NSMutableArray alloc] initWithCapacity:0];
+    contentDataArray=[[NSMutableArray alloc] init];
+}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self=[super initWithCoder:aDecoder];
+    if(self)
+    {
+        [self dataInit];
+    }
+    return self;
+}
+-(void)awakeFromNib
+{
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    headerTitleArray=[[NSMutableArray alloc] initWithCapacity:3];
-    currentCombListItemArray=[[NSMutableArray alloc] initWithCapacity:0];
+    if(!IS_IOS_7)
+    {
+        NSLog(@"color:%@",self.view.backgroundColor);
+        self.view.backgroundColor=[UIColor yellowColor];
+    }
 
 }
 //刷新二级标签标题
@@ -86,6 +111,10 @@
 {
     return currentCombListItemArray.count;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 30;
+}
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //子类自定义
@@ -100,6 +129,7 @@
 }
 -(void)dealloc
 {
+    [contentDataArray release];
     [currentCombListItemArray release];
     [headerTitleArray release];
     [segment release];

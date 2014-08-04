@@ -33,6 +33,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if(!IS_IOS_7)
+    {
+        NSLog(@"color:%@",self.view.backgroundColor);
+        self.view.backgroundColor=MIAN_BACK_COLOR;
+    }
     // Do any additional setup after loading the view.
     
     

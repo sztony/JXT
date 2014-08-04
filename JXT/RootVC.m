@@ -1,18 +1,18 @@
 //
-//  LoginBaseVC.m
+//  RootVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-7-30.
+//  Created by 伍 兵 on 14-8-4.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "LoginBaseVC.h"
+#import "RootVC.h"
 
-@interface LoginBaseVC ()
+@interface RootVC ()
 
 @end
 
-@implementation LoginBaseVC
+@implementation RootVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,11 +22,18 @@
     }
     return self;
 }
-
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self=[super initWithCoder:aDecoder];
+    if(self)
+    {
+        dataCenter=[GlobalDataManager sharedDataManager];
+    }
+    return self;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
     // Do any additional setup after loading the view.
 }
 
@@ -36,16 +43,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-   for(UIView * aView in  [self.view subviews])
-   {
-       if([aView isKindOfClass:[UITextField class]])
-       {
-           [aView resignFirstResponder];
-       }
-   }
-}
 /*
 #pragma mark - Navigation
 

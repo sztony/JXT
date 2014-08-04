@@ -83,8 +83,9 @@
 }
 -(void)showAtRect:(CGRect)aRect edgeInset:(UIEdgeInsets)edgeInset inView:(UIView*)aView
 {
+    NSLog(@"row.height:%f",contentListView.rowHeight);
     self.frame=aView.bounds;
-    CGRect needRect=CGRectMake(aRect.origin.x, aRect.origin.y, aRect.size.width, MIN(aRect.size.height,edgeInset.top+edgeInset.bottom+[contentListView numberOfRowsInSection:0]* contentListView.rowHeight));
+    CGRect needRect=CGRectMake(aRect.origin.x, aRect.origin.y, aRect.size.width, MIN(aRect.size.height,edgeInset.top+edgeInset.bottom+[contentListView numberOfRowsInSection:0]* [contentListView.delegate tableView:contentListView heightForRowAtIndexPath:nil]));
     
     contentView.frame=needRect;
     contentListView.frame =UIEdgeInsetsInsetRect(contentView.bounds, edgeInset);
@@ -114,6 +115,7 @@
                 if([delegate respondsToSelector:@selector(combList:SelectedIndexPath:)])
                 {
                     [delegate combList:self SelectedIndexPath:path];
+                    
                 }
             }
         }

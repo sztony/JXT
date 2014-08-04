@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
     //一级标签
-    segment.normalColor=[UIColor whiteColor];
-    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
+    segment.selectedColor=[UIColor whiteColor];
+    segment.normalColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
     segment.delegate=self;
     [segment setTitleArray:@[@"高中老师",@"初中老师",@"小学老师"]];
     [segment setSegmentDirection:kWBSegmentHorizonal];

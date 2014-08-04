@@ -38,11 +38,19 @@
    for(UITabBarItem* item in self.tabBar.items)
    {
        NSLog(@"item.tag:%d",item.tag);
+       if([[[UIDevice currentDevice] systemVersion] hasPrefix:@"7"])
+       {
        item.image=[images[item.tag-1] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
        item.selectedImage=[selectedImages[item.tag-1] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+       
+       }
+       else
+       {
+        [item setFinishedSelectedImage:selectedImages[item.tag-1] withFinishedUnselectedImage:images[item.tag-1]];
+    
+       }
        [item setTitleTextAttributes:attriDict1 forState:UIControlStateNormal];
        [item setTitleTextAttributes:attriDict2 forState:UIControlStateSelected];
-        //[item setFinishedSelectedImage:selectedImages[item.tag-1] withFinishedUnselectedImage:images[item.tag-1]];
    }
 }
 - (void)viewDidLoad

@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
     //一级标签
-    segment.normalColor=[UIColor whiteColor];
-    segment.selectedColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
+    segment.selectedColor=[UIColor whiteColor];
+    segment.normalColor=[UIColor colorWithRed:94/255.0 green:195/255.0 blue:1.0 alpha:0.8];
     segment.delegate=self;
     [segment setTitleArray:@[@"微课课程",@"名师课程"]];
     [segment setSegmentDirection:kWBSegmentHorizonal];
@@ -119,7 +119,7 @@
     {
         cell=[[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ID"]autorelease];
     }
-    cell.backgroundColor=[UIColor clearColor];
+    cell.backgroundColor=[UIColor whiteColor];
     cell.textLabel.text=[self.currentCombListItemArray objectAtIndex:indexPath.row];
     return cell;
 }
