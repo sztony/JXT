@@ -9,7 +9,9 @@
 #import "RegisterVC.h"
 
 @interface RegisterVC ()
-
+{
+    NSString* verifyCode;
+}
 @end
 
 @implementation RegisterVC
@@ -35,69 +37,102 @@
     if(phoneNumField.text.length==11)
     {
         //URL
-        NSURL * url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_FindPwd]];
-        NSString* dataString = [NSString stringWithFormat:@"registerMobile=%@",phoneNumField.text];
-        NSLog(@"dataString:%@",dataString);
+        NSURL* url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_GetVertifyCode]];
+        //参数
+        NSMutableDictionary* dict=[[NSMutableDictionary alloc] init];
+        [dict setObject:phoneNumField.text forKey:@"registMobile"];
+        
         //请求
-        NSMutableURLRequest* request=[NSMutableURLRequest requestWithURL:url];
-        [request setHTTPMethod:@"POST"];//请求类型
-        [request setHTTPBody:[dataString dataUsingEncoding:NSUTF8StringEncoding]];
-        //连接
-        [NSURLConnection sendAsynchronousRequest:request queue:[[GlobalDataManager sharedDataManager] globalTaskQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        [WBHTTPRequest sendRequestWithURL:url parameterDict:dict type:kWBHTTPRequestPOSTType  queue:[dataCenter globalTaskQueue] completeHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
             NSLog(@"error:%@",connectionError);
-            NSLog(@"string:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-            //成功
-            if(!connectionError)
+            NSLog(@"data:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+            //网络连接错误
+            if(connectionError)
             {
-                //发送的状态
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    //statusLabel2.text=@"发送成功";
+                    statusLabel.text=[NSString stringWithFormat:@"连接错误:%@",connectionError];
+                    return ;
                 });
-                //解析
-                NSError* error=nil;
-                NSDictionary * dict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-                NSLog(@"dict:%@",dict);
-                if(!error)
+            }
+            //操作成功与否检测
+            //        Boolean status=[[dict valueForKey:@"success"] boolValue];
+            //        NSLog(@"value:%@",[dict valueForKey:@"success"]);
+            //        NSLog(@"status:%d",status);
+            //        if(!status)
+            //        {
+            //            dispatch_async(dispatch_get_main_queue(), ^{
+            //                NSLog(@"操作失败!");
+            //                alertLabel.text=@"操作失败!";
+            //                return ;
+            //            });
+            //        }
+            NSError* error=nil;
+            NSDictionary * backDataDict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+            NSLog(@"dict:%@",backDataDict);
+            verifyCode=[[[backDataDict objectForKey:@"result"] objectForKey:@"verifyCode"] retain];
+            
+            if(!error)
+            {
+                //消息检测
+                NSString* msg=[backDataDict objectForKey:@"msg"];
+                if([msg hasPrefix:@"操作成功"])
                 {
-                    NSString* msg=[dict objectForKey:@"msg"];
-                    //NSLog(@"msg:%@")
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        //statusLabel1.text=msg;
+                        NSLog(@"%@",msg);
+                        statusLabel.text=msg;
                     });
-                    NSString* msgCode=[dict objectForKey:@"msgcode"];
-                    NSDictionary* userInfoDict=[dict objectForKey:@"result"];
-                    BOOL status=[[dict valueForKey:@"success"] boolValue];
-                    if(status&&[msg isEqualToString:@"操作成功"])
-                    {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            //成功的处理
-                        });
-                    }
-                    
                 }
-                else
-                {
-                    NSLog(@"login parse error:%@",error);
-                }
-                
             }
             else
             {
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    //statusLabel2.text=[NSString stringWithFormat:@"发送错误:%@",connectionError];
+                    statusLabel.text=@"操作失败!";
                 });
             }
-            
         }];
+        
     }
     else
     {
-        
+         statusLabel.text=@"号码有误!";
     }
 }
 -(IBAction)registerBtnClicked:(id)sender
 {
+    /*
+    if(nameField.text.length==0)
+    {
+        statusLabel.text=@"请输入姓名!";
+        return;
+    }
+    if(passwordField.text.length==0)
+    {
+        statusLabel.text=@"请输入密码!";
+        return;
+    }
+    if(phoneNumField.text.length==0)
+    {
+        statusLabel.text=@"请输入手机号!";
+        return;
+    }
+    if(vertifyNumField.text.length==0)
+    {
+        statusLabel.text=@"请输入验证码!";
+        return;
+    }
+    if(![vertifyNumField.text isEqualToString:verifyCode])
+    {
+        statusLabel.text=@"验证码错误!";
+        return;
+    }
+     */
+    //保存待注册
+    dataCenter.userRealName=nameField.text;
+    dataCenter.userMobile=phoneNumField.text;
+    dataCenter.userPassword=passwordField.text;
     
+    //进入完善信息页
+    [self performSegueWithIdentifier:@"RegistToFulfillInfoSegue" sender:nil];
 }
 - (void)didReceiveMemoryWarning
 {

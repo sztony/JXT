@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WBCombListHeader.h"
 #import "LoginBaseVC.h"
-@interface FulFillInfoVC : LoginBaseVC
-
+#import "WBCombList.h"
+@interface FulFillInfoVC : LoginBaseVC<WBCombListDelegate,UITableViewDataSource,UITableViewDelegate>
+{
+    IBOutlet WBCombListHeader* gradeHead;
+    IBOutlet WBCombListHeader* schoolHead;
+    IBOutlet UILabel* statusLabel;
+}
 @end

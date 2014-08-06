@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface LoginBaseVC : UIViewController
+#import "RootVC.h"
+@interface LoginBaseVC : RootVC
 
 @end

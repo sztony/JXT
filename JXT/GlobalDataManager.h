@@ -14,6 +14,7 @@
 @property(nonatomic,retain) NSOperationQueue* globalTaskQueue;
 //全局用户属性
 @property(nonatomic,retain) NSString* userID;
+@property(nonatomic,retain) NSString* userPassword;
 @property(nonatomic,retain) NSString* userMobile;
 @property(nonatomic,retain) NSString* userRealName;
 @property(nonatomic,retain) NSString* userNickName;

@@ -14,5 +14,6 @@
     IBOutlet UITextField * passwordField;
     IBOutlet UITextField * phoneNumField;
     IBOutlet UITextField * vertifyNumField;
+    IBOutlet UILabel* statusLabel;
 }
 @end

@@ -101,6 +101,17 @@
 		D0EA9F401991235A002DCBB0 /* AddressListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F3F1991235A002DCBB0 /* AddressListItemCell.m */; };
 		D0EA9F4419913493002DCBB0 /* FollowSubjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F4319913493002DCBB0 /* FollowSubjectContainer.m */; };
 		D0EA9F47199134B7002DCBB0 /* FollowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F46199134B7002DCBB0 /* FollowVC.m */; };
+		D0F114281991CA2C00FE1A99 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F114271991CA2C00FE1A99 /* OrderListVC.m */; };
+		D0F1142B1991CC0A00FE1A99 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F1142A1991CC0A00FE1A99 /* OrderListCell.m */; };
+		D0F1142D1991D11400FE1A99 /* addTime.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F1142C1991D11400FE1A99 /* addTime.png */; };
+		D0F114301991D51500FE1A99 /* pay.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F1142F1991D51500FE1A99 /* pay.png */; };
+		D0F114341991D64800FE1A99 /* CartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F114331991D64800FE1A99 /* CartVC.m */; };
+		D0F791C71992717B00B37A9A /* FetchAreaBaseTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791C61992717B00B37A9A /* FetchAreaBaseTableVC.m */; };
+		D0F791CA199274EC00B37A9A /* FetchProvinceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791C9199274EC00B37A9A /* FetchProvinceVC.m */; };
+		D0F791CD199274FD00B37A9A /* FetchCityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791CC199274FD00B37A9A /* FetchCityVC.m */; };
+		D0F791D01992751D00B37A9A /* FetchTownVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791CF1992751D00B37A9A /* FetchTownVC.m */; };
+		D0F791D31992753800B37A9A /* FetchSchoolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791D21992753800B37A9A /* FetchSchoolVC.m */; };
+		D0F791D61992754D00B37A9A /* FetchPhaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F791D51992754D00B37A9A /* FetchPhaseVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +265,26 @@
 		D0EA9F4319913493002DCBB0 /* FollowSubjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowSubjectContainer.m; sourceTree = "<group>"; };
 		D0EA9F45199134B7002DCBB0 /* FollowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowVC.h; sourceTree = "<group>"; };
 		D0EA9F46199134B7002DCBB0 /* FollowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowVC.m; sourceTree = "<group>"; };
+		D0F114261991CA2C00FE1A99 /* OrderListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
+		D0F114271991CA2C00FE1A99 /* OrderListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
+		D0F114291991CC0A00FE1A99 /* OrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
+		D0F1142A1991CC0A00FE1A99 /* OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
+		D0F1142C1991D11400FE1A99 /* addTime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addTime.png; sourceTree = "<group>"; };
+		D0F1142F1991D51500FE1A99 /* pay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pay.png; sourceTree = "<group>"; };
+		D0F114321991D64800FE1A99 /* CartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartVC.h; sourceTree = "<group>"; };
+		D0F114331991D64800FE1A99 /* CartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartVC.m; sourceTree = "<group>"; };
+		D0F791C51992717B00B37A9A /* FetchAreaBaseTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchAreaBaseTableVC.h; sourceTree = "<group>"; };
+		D0F791C61992717B00B37A9A /* FetchAreaBaseTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchAreaBaseTableVC.m; sourceTree = "<group>"; };
+		D0F791C8199274EC00B37A9A /* FetchProvinceVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchProvinceVC.h; sourceTree = "<group>"; };
+		D0F791C9199274EC00B37A9A /* FetchProvinceVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchProvinceVC.m; sourceTree = "<group>"; };
+		D0F791CB199274FD00B37A9A /* FetchCityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchCityVC.h; sourceTree = "<group>"; };
+		D0F791CC199274FD00B37A9A /* FetchCityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchCityVC.m; sourceTree = "<group>"; };
+		D0F791CE1992751D00B37A9A /* FetchTownVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchTownVC.h; sourceTree = "<group>"; };
+		D0F791CF1992751D00B37A9A /* FetchTownVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchTownVC.m; sourceTree = "<group>"; };
+		D0F791D11992753800B37A9A /* FetchSchoolVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchSchoolVC.h; sourceTree = "<group>"; };
+		D0F791D21992753800B37A9A /* FetchSchoolVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchSchoolVC.m; sourceTree = "<group>"; };
+		D0F791D41992754D00B37A9A /* FetchPhaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchPhaseVC.h; sourceTree = "<group>"; };
+		D0F791D51992754D00B37A9A /* FetchPhaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchPhaseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +465,7 @@
 		D0407E6E197A20E800894414 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				D0F1142E1991D50900FE1A99 /* Cart */,
 				D0613240197A72DE00052FDC /* addressList.png */,
 				D0613241197A72DE00052FDC /* cards.png */,
 				D0613242197A72DE00052FDC /* charger.png */,
@@ -495,6 +527,7 @@
 			children = (
 				D0407EAF197A6E6A00894414 /* SettingsVC.h */,
 				D0407EB0197A6E6A00894414 /* SettingsVC.m */,
+				D0F114311991D62B00FE1A99 /* Cart */,
 				D0F114251991C94400FE1A99 /* OrderList */,
 				D0EA9F4119913255002DCBB0 /* MyFollow */,
 				D0EA9F3319911484002DCBB0 /* ParentMonitor */,
@@ -528,6 +561,7 @@
 		D0C70448198F594F00A234D7 /* tmp */ = {
 			isa = PBXGroup;
 			children = (
+				D0F1142C1991D11400FE1A99 /* addTime.png */,
 				D0EA9F2C19910F89002DCBB0 /* member.png */,
 				D0C7044E198F7F4900A234D7 /* teacherHead.png */,
 				D0C70449198F594F00A234D7 /* math.png */,
@@ -626,8 +660,7 @@
 				D0E255DC197F832900F45365 /* FindPasswordVC.m */,
 				D0E255D8197F831500F45365 /* RegisterVC.h */,
 				D0E255D9197F831500F45365 /* RegisterVC.m */,
-				D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */,
-				D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */,
+				D0F791C219926F9200B37A9A /* FulfillInfo */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -688,8 +721,66 @@
 		D0F114251991C94400FE1A99 /* OrderList */ = {
 			isa = PBXGroup;
 			children = (
+				D0F114261991CA2C00FE1A99 /* OrderListVC.h */,
+				D0F114271991CA2C00FE1A99 /* OrderListVC.m */,
+				D0F114291991CC0A00FE1A99 /* OrderListCell.h */,
+				D0F1142A1991CC0A00FE1A99 /* OrderListCell.m */,
 			);
 			name = OrderList;
+			sourceTree = "<group>";
+		};
+		D0F1142E1991D50900FE1A99 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				D0F1142F1991D51500FE1A99 /* pay.png */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		D0F114311991D62B00FE1A99 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				D0F114321991D64800FE1A99 /* CartVC.h */,
+				D0F114331991D64800FE1A99 /* CartVC.m */,
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		D0F791C219926F9200B37A9A /* FulfillInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D0F791C419926FCE00B37A9A /* NavigationMethod */,
+				D0F791C319926F9B00B37A9A /* CombListMethod */,
+			);
+			name = FulfillInfo;
+			sourceTree = "<group>";
+		};
+		D0F791C319926F9B00B37A9A /* CombListMethod */ = {
+			isa = PBXGroup;
+			children = (
+				D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */,
+				D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */,
+			);
+			name = CombListMethod;
+			sourceTree = "<group>";
+		};
+		D0F791C419926FCE00B37A9A /* NavigationMethod */ = {
+			isa = PBXGroup;
+			children = (
+				D0F791C51992717B00B37A9A /* FetchAreaBaseTableVC.h */,
+				D0F791C61992717B00B37A9A /* FetchAreaBaseTableVC.m */,
+				D0F791C8199274EC00B37A9A /* FetchProvinceVC.h */,
+				D0F791C9199274EC00B37A9A /* FetchProvinceVC.m */,
+				D0F791CB199274FD00B37A9A /* FetchCityVC.h */,
+				D0F791CC199274FD00B37A9A /* FetchCityVC.m */,
+				D0F791CE1992751D00B37A9A /* FetchTownVC.h */,
+				D0F791CF1992751D00B37A9A /* FetchTownVC.m */,
+				D0F791D11992753800B37A9A /* FetchSchoolVC.h */,
+				D0F791D21992753800B37A9A /* FetchSchoolVC.m */,
+				D0F791D41992754D00B37A9A /* FetchPhaseVC.h */,
+				D0F791D51992754D00B37A9A /* FetchPhaseVC.m */,
+			);
+			name = NavigationMethod;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -785,6 +876,7 @@
 				D0613253197A72DE00052FDC /* userInfo.png in Resources */,
 				D0407E3F197A1B1200894414 /* InfoPlist.strings in Resources */,
 				D0E255CD197F60A300F45365 /* loginBack.png in Resources */,
+				D0F1142D1991D11400FE1A99 /* addTime.png in Resources */,
 				D061324A197A72DE00052FDC /* addressList.png in Resources */,
 				D061324E197A72DE00052FDC /* myClass.png in Resources */,
 				D0E255CF197F60A300F45365 /* register.png in Resources */,
@@ -809,6 +901,7 @@
 				D061324D197A72DE00052FDC /* defaultUser.png in Resources */,
 				D0407E84197A26BD00894414 /* 搜索2.png in Resources */,
 				D0E255CE197F60A300F45365 /* passwordIcon.png in Resources */,
+				D0F114301991D51500FE1A99 /* pay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -839,14 +932,19 @@
 				D0CA9ED8199095B3001A9555 /* SearchResultCell.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
 				D0CA9EDF1990CB85001A9555 /* ChangeNickNameVC.m in Sources */,
+				D0F791C71992717B00B37A9A /* FetchAreaBaseTableVC.m in Sources */,
+				D0F791D61992754D00B37A9A /* FetchPhaseVC.m in Sources */,
 				D0CA9EE51990ED21001A9555 /* MemberListCell.m in Sources */,
 				D0EA9F4419913493002DCBB0 /* FollowSubjectContainer.m in Sources */,
 				D0C70447198F3A0000A234D7 /* RootVC.m in Sources */,
 				D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */,
+				D0F791D01992751D00B37A9A /* FetchTownVC.m in Sources */,
 				D0407E45197A1B1200894414 /* AppDelegate.m in Sources */,
 				D0DBEBB019906DF600B01FCB /* ClassMsgCell.m in Sources */,
 				D0407EA2197A562600894414 /* HomeVC.m in Sources */,
 				D0EA9F401991235A002DCBB0 /* AddressListItemCell.m in Sources */,
+				D0F791CA199274EC00B37A9A /* FetchProvinceVC.m in Sources */,
+				D0F114341991D64800FE1A99 /* CartVC.m in Sources */,
 				D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */,
 				D0407EAB197A56EE00894414 /* LessonMarketVC.m in Sources */,
 				D0407E41197A1B1200894414 /* main.m in Sources */,
@@ -855,7 +953,9 @@
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
 				D06BCAD2198C8B070047ACC3 /* SchoolLessonCustomCell.m in Sources */,
 				D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */,
+				D0F791D31992753800B37A9A /* FetchSchoolVC.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
+				D0F1142B1991CC0A00FE1A99 /* OrderListCell.m in Sources */,
 				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
 				D0EA9F321991142F002DCBB0 /* AddressListVC.m in Sources */,
 				D0C076AE19893518004CB68D /* NSString+MD5.m in Sources */,
@@ -864,6 +964,8 @@
 				D0CA9ED519908C9C001A9555 /* SchoolMsgCell.m in Sources */,
 				D0CE13AF198A0609002FA3A3 /* WBSegment.m in Sources */,
 				D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */,
+				D0F114281991CA2C00FE1A99 /* OrderListVC.m in Sources */,
+				D0F791CD199274FD00B37A9A /* FetchCityVC.m in Sources */,
 				D0CFF19D1988BB8800A6ABF2 /* WBCombListHeader.m in Sources */,
 				D0C7043619885D9B00EB4426 /* LoginBaseVC.m in Sources */,
 				D0CA9EDC1990CA90001A9555 /* PersonSettingBaseVC.m in Sources */,
@@ -995,14 +1097,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Transtrue Technology Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Transtrue Technology Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44E9CA0B-3157-4A73-A3CD-622E99B9C205";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1013,14 +1115,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Transtrue Technology Inc.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Transtrue Technology Inc.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JXT/JXT-Prefix.pch";
 				INFOPLIST_FILE = "JXT/JXT-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "44E9CA0B-3157-4A73-A3CD-622E99B9C205";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

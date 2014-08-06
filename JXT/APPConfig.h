@@ -5,8 +5,8 @@
 //  Created by 伍 兵 on 14-7-31.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
-//#define HOST_URL @"http://223.71.208.118:8180/jxt/"
-#define HOST_URL @"http://192.168.20.216:8180/jxt/" //内网
+#define HOST_URL @"http://223.71.208.118:8180/jxt/"
+//#define HOST_URL @"http://192.168.20.216:8180/jxt/" //内网
 
 //接口1
 //登录接口

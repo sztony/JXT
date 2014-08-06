@@ -10,7 +10,7 @@
 static GlobalDataManager* m;
 @implementation GlobalDataManager
 @synthesize globalTaskQueue;
-@synthesize userID,userMobile,userRealName,userNickName,userPic,userBigPic,userSchoolName;
+@synthesize userID,userPassword,userMobile,userRealName,userNickName,userPic,userBigPic,userSchoolName;
 +(id)sharedDataManager
 {
     static dispatch_once_t onceToken;
