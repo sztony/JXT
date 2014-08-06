@@ -10,7 +10,7 @@
 
 @interface MyLessonVC ()
 {
-    NSInteger segmentSelectIndexInitValue;//segment初始选中值
+   
 }
 @end
 
@@ -27,7 +27,7 @@
 -(void)dataInit
 {
     [super dataInit];
-    segmentSelectIndexInitValue=1;
+    //segmentSelectIndexInitValue=1;
 }
 - (void)viewDidLoad
 {

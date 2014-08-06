@@ -1,54 +1,45 @@
 //
-//  PersonalVC.m
+//  ParentMonitorVC.m
 //  JXT
 //
-//  Created by CW on 14-7-22.
+//  Created by 伍 兵 on 14-8-5.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "PersonalVC.h"
+#import "ParentMonitorVC.h"
 
-@interface PersonalVC ()
-{
-    GlobalDataManager* m;
-}
+@interface ParentMonitorVC ()
+
 @end
 
-@implementation PersonalVC
+@implementation ParentMonitorVC
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-     
     }
     return self;
 }
--(void)awakeFromNib
-{
-   
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    nickNameLabel.text=m.userNickName;
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    m = [GlobalDataManager sharedDataManager];
-    
-    NSLog(@"realName:%@",m.userRealName);
-    
-    
-    realNameLabel.text=m.userRealName;
-    schoolLabel.text=m.userSchoolName;
-    mobileLabel.text=m.userMobile;
-    
-    NSLog(@"xx:%@",realNameLabel.text);
-    
     // Do any additional setup after loading the view.
 }
-
+-(IBAction)makePhoneCall:(id)sender
+{
+    NSURL* url=[NSURL URLWithString:@"tel://8008808888"];
+    if([[UIApplication sharedApplication] canOpenURL:url])
+        [[UIApplication sharedApplication] openURL:url];
+    else
+    {
+        UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"请使用iPhone" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        [alert release];
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

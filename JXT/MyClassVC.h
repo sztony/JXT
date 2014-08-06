@@ -7,7 +7,9 @@
 //
 
 #import "BaseVC.h"
-
+#import "SchoolMsgCell.h"
+#import "ClassMsgCell.h"
+#import "MemberListCell.h"
 @interface MyClassVC : BaseVC
 
 @end

@@ -15,7 +15,7 @@
 @end
 
 @implementation BaseVC
-@synthesize queue;
+
 @synthesize headerTitleArray;
 @synthesize currentCombListItemArray;
 @synthesize contentDataArray;
@@ -32,6 +32,7 @@
     headerTitleArray=[[NSMutableArray alloc] initWithCapacity:3];
     currentCombListItemArray=[[NSMutableArray alloc] initWithCapacity:0];
     contentDataArray=[[NSMutableArray alloc] init];
+    segmentSelectIndexInitValue=1;
 }
 -(id)initWithCoder:(NSCoder *)aDecoder
 {

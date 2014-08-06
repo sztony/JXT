@@ -20,11 +20,12 @@
     
      IBOutlet UITableView* contentTableView;//内容数据table
     WBCombListHeader* currentClickedHeader;
+     NSInteger segmentSelectIndexInitValue;//segment初始选中值
 }
 -(void)dataInit;
 -(void)refreshHeader;
 -(void)headerClicked:(WBCombListHeader*)aHeader;
-@property(nonatomic,retain) NSOperationQueue* queue;
+
 @property(nonatomic,retain) NSMutableArray* headerTitleArray;
 @property(nonatomic,retain) NSMutableArray* currentCombListItemArray;
 @property(nonatomic,retain) NSMutableArray* contentDataArray;

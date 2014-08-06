@@ -7,7 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
-
+#import "ClassMsgCell.h"
+#import "SchoolMsgCell.h"
 @interface MessageVC : BaseVC
 
 @end

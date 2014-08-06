@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface SearchViewController : UIViewController<UISearchBarDelegate>
+#import "SearchResultCell.h"
+#import "RootVC.h"
+@interface SearchViewController : RootVC<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     IBOutlet UISearchBar * searchBar;
+    IBOutlet UITableView * contentTableView;
+    
+    NSMutableArray* dataArray;
+    
+    NSInteger segmentCurrentSelectedIndex;
 }
 @end

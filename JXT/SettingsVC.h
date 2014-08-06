@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsVC : UITableViewController
+@interface SettingsVC : UITableViewController<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 {
     IBOutlet UIImageView* headerImageView;
     IBOutlet UILabel * nameLabel;

@@ -62,6 +62,12 @@
 		D0C7044A198F594F00A234D7 /* math.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C70449198F594F00A234D7 /* math.png */; };
 		D0C7044D198F7AF700A234D7 /* HomeWorkTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7044C198F7AF700A234D7 /* HomeWorkTopView.m */; };
 		D0C7044F198F7F4900A234D7 /* teacherHead.png in Resources */ = {isa = PBXBuildFile; fileRef = D0C7044E198F7F4900A234D7 /* teacherHead.png */; };
+		D0CA9ED519908C9C001A9555 /* SchoolMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9ED419908C9C001A9555 /* SchoolMsgCell.m */; };
+		D0CA9ED8199095B3001A9555 /* SearchResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9ED7199095B3001A9555 /* SearchResultCell.m */; };
+		D0CA9EDC1990CA90001A9555 /* PersonSettingBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EDB1990CA90001A9555 /* PersonSettingBaseVC.m */; };
+		D0CA9EDF1990CB85001A9555 /* ChangeNickNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EDE1990CB85001A9555 /* ChangeNickNameVC.m */; };
+		D0CA9EE21990CBA0001A9555 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EE11990CBA0001A9555 /* ChangePasswordVC.m */; };
+		D0CA9EE51990ED21001A9555 /* MemberListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EE41990ED21001A9555 /* MemberListCell.m */; };
 		D0CC0AEE1987D2CD002595F8 /* FulFillInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */; };
 		D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF51987D474002595F8 /* WBCheckBox.m */; };
 		D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF81987D474002595F8 /* WBCombList.m */; };
@@ -71,6 +77,7 @@
 		D0CE14AE1982239D00ED77E0 /* MessageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE14AD1982239D00ED77E0 /* MessageVC.m */; };
 		D0CFF19D1988BB8800A6ABF2 /* WBCombListHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CFF19C1988BB8800A6ABF2 /* WBCombListHeader.m */; };
 		D0CFF1A11989035A00A6ABF2 /* detailDown.png in Resources */ = {isa = PBXBuildFile; fileRef = D0CFF1A01989035A00A6ABF2 /* detailDown.png */; };
+		D0DBEBB019906DF600B01FCB /* ClassMsgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DBEBAF19906DF600B01FCB /* ClassMsgCell.m */; };
 		D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD7D197EB10800733568 /* SearchViewController.m */; };
 		D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E1CD85197EBBFB00733568 /* BaseVC.m */; };
 		D0E1CD88197EBBFB00733568 /* BaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E1CD86197EBBFB00733568 /* BaseVC.xib */; };
@@ -85,6 +92,15 @@
 		D0E255DA197F831500F45365 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D9197F831500F45365 /* RegisterVC.m */; };
 		D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255DC197F832900F45365 /* FindPasswordVC.m */; };
 		D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */; };
+		D0EA9F2D19910F89002DCBB0 /* member.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EA9F2C19910F89002DCBB0 /* member.png */; };
+		D0EA9F321991142F002DCBB0 /* AddressListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F311991142F002DCBB0 /* AddressListVC.m */; };
+		D0EA9F36199114D6002DCBB0 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F35199114D6002DCBB0 /* MapVC.m */; };
+		D0EA9F3819911A2F002DCBB0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EA9F3719911A2F002DCBB0 /* MapKit.framework */; };
+		D0EA9F3A19911A37002DCBB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EA9F3919911A37002DCBB0 /* CoreLocation.framework */; };
+		D0EA9F3D19911E83002DCBB0 /* ParentMonitorVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F3C19911E83002DCBB0 /* ParentMonitorVC.m */; };
+		D0EA9F401991235A002DCBB0 /* AddressListItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F3F1991235A002DCBB0 /* AddressListItemCell.m */; };
+		D0EA9F4419913493002DCBB0 /* FollowSubjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F4319913493002DCBB0 /* FollowSubjectContainer.m */; };
+		D0EA9F47199134B7002DCBB0 /* FollowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F46199134B7002DCBB0 /* FollowVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,6 +187,18 @@
 		D0C7044B198F7AF700A234D7 /* HomeWorkTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeWorkTopView.h; sourceTree = "<group>"; };
 		D0C7044C198F7AF700A234D7 /* HomeWorkTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeWorkTopView.m; sourceTree = "<group>"; };
 		D0C7044E198F7F4900A234D7 /* teacherHead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacherHead.png; sourceTree = "<group>"; };
+		D0CA9ED319908C9C001A9555 /* SchoolMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchoolMsgCell.h; sourceTree = "<group>"; };
+		D0CA9ED419908C9C001A9555 /* SchoolMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SchoolMsgCell.m; sourceTree = "<group>"; };
+		D0CA9ED6199095B3001A9555 /* SearchResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultCell.h; sourceTree = "<group>"; };
+		D0CA9ED7199095B3001A9555 /* SearchResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCell.m; sourceTree = "<group>"; };
+		D0CA9EDA1990CA90001A9555 /* PersonSettingBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonSettingBaseVC.h; sourceTree = "<group>"; };
+		D0CA9EDB1990CA90001A9555 /* PersonSettingBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonSettingBaseVC.m; sourceTree = "<group>"; };
+		D0CA9EDD1990CB85001A9555 /* ChangeNickNameVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNickNameVC.h; sourceTree = "<group>"; };
+		D0CA9EDE1990CB85001A9555 /* ChangeNickNameVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeNickNameVC.m; sourceTree = "<group>"; };
+		D0CA9EE01990CBA0001A9555 /* ChangePasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordVC.h; sourceTree = "<group>"; };
+		D0CA9EE11990CBA0001A9555 /* ChangePasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordVC.m; sourceTree = "<group>"; };
+		D0CA9EE31990ED21001A9555 /* MemberListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberListCell.h; sourceTree = "<group>"; };
+		D0CA9EE41990ED21001A9555 /* MemberListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberListCell.m; sourceTree = "<group>"; };
 		D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FulFillInfoVC.h; sourceTree = "<group>"; };
 		D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FulFillInfoVC.m; sourceTree = "<group>"; };
 		D0CC0AF41987D474002595F8 /* WBCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCheckBox.h; sourceTree = "<group>"; };
@@ -189,6 +217,8 @@
 		D0CFF19B1988BB8800A6ABF2 /* WBCombListHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCombListHeader.h; sourceTree = "<group>"; };
 		D0CFF19C1988BB8800A6ABF2 /* WBCombListHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCombListHeader.m; sourceTree = "<group>"; };
 		D0CFF1A01989035A00A6ABF2 /* detailDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailDown.png; sourceTree = "<group>"; };
+		D0DBEBAE19906DF600B01FCB /* ClassMsgCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassMsgCell.h; sourceTree = "<group>"; };
+		D0DBEBAF19906DF600B01FCB /* ClassMsgCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassMsgCell.m; sourceTree = "<group>"; };
 		D0E1CD7C197EB10800733568 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		D0E1CD7D197EB10800733568 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D0E1CD84197EBBFB00733568 /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
@@ -209,6 +239,21 @@
 		D0E255DC197F832900F45365 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		D0E34176198B1CE7009DEBF1 /* WBHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHTTPRequest.h; sourceTree = "<group>"; };
 		D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHTTPRequest.m; sourceTree = "<group>"; };
+		D0EA9F2C19910F89002DCBB0 /* member.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member.png; sourceTree = "<group>"; };
+		D0EA9F301991142F002DCBB0 /* AddressListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListVC.h; sourceTree = "<group>"; };
+		D0EA9F311991142F002DCBB0 /* AddressListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListVC.m; sourceTree = "<group>"; };
+		D0EA9F34199114D6002DCBB0 /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
+		D0EA9F35199114D6002DCBB0 /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
+		D0EA9F3719911A2F002DCBB0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D0EA9F3919911A37002DCBB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0EA9F3B19911E83002DCBB0 /* ParentMonitorVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentMonitorVC.h; sourceTree = "<group>"; };
+		D0EA9F3C19911E83002DCBB0 /* ParentMonitorVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentMonitorVC.m; sourceTree = "<group>"; };
+		D0EA9F3E1991235A002DCBB0 /* AddressListItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListItemCell.h; sourceTree = "<group>"; };
+		D0EA9F3F1991235A002DCBB0 /* AddressListItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListItemCell.m; sourceTree = "<group>"; };
+		D0EA9F4219913493002DCBB0 /* FollowSubjectContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowSubjectContainer.h; sourceTree = "<group>"; };
+		D0EA9F4319913493002DCBB0 /* FollowSubjectContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowSubjectContainer.m; sourceTree = "<group>"; };
+		D0EA9F45199134B7002DCBB0 /* FollowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowVC.h; sourceTree = "<group>"; };
+		D0EA9F46199134B7002DCBB0 /* FollowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +261,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EA9F3A19911A37002DCBB0 /* CoreLocation.framework in Frameworks */,
+				D0EA9F3819911A2F002DCBB0 /* MapKit.framework in Frameworks */,
 				D0407E37197A1B1200894414 /* CoreGraphics.framework in Frameworks */,
 				D0407E39197A1B1200894414 /* UIKit.framework in Frameworks */,
 				D0407E35197A1B1200894414 /* Foundation.framework in Frameworks */,
@@ -259,6 +306,8 @@
 		D0407E33197A1B1200894414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA9F3919911A37002DCBB0 /* CoreLocation.framework */,
+				D0EA9F3719911A2F002DCBB0 /* MapKit.framework */,
 				D0407E34197A1B1200894414 /* Foundation.framework */,
 				D0407E36197A1B1200894414 /* CoreGraphics.framework */,
 				D0407E38197A1B1200894414 /* UIKit.framework */,
@@ -425,6 +474,8 @@
 			children = (
 				D0E1CD7C197EB10800733568 /* SearchViewController.h */,
 				D0E1CD7D197EB10800733568 /* SearchViewController.m */,
+				D0CA9ED6199095B3001A9555 /* SearchResultCell.h */,
+				D0CA9ED7199095B3001A9555 /* SearchResultCell.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -434,6 +485,7 @@
 			children = (
 				D0CE14AC1982239D00ED77E0 /* MessageVC.h */,
 				D0CE14AD1982239D00ED77E0 /* MessageVC.m */,
+				D0DBEBAD19906DD300B01FCB /* ClassMsg */,
 			);
 			name = Message;
 			sourceTree = "<group>";
@@ -443,10 +495,12 @@
 			children = (
 				D0407EAF197A6E6A00894414 /* SettingsVC.h */,
 				D0407EB0197A6E6A00894414 /* SettingsVC.m */,
-				C003179F197F8F3F0072551F /* PersonalVC.h */,
-				C00317A0197F8F3F0072551F /* PersonalVC.m */,
-				D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */,
-				D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */,
+				D0F114251991C94400FE1A99 /* OrderList */,
+				D0EA9F4119913255002DCBB0 /* MyFollow */,
+				D0EA9F3319911484002DCBB0 /* ParentMonitor */,
+				D0EA9F2F199113F4002DCBB0 /* AddressList */,
+				D0CA9ED91990CA19001A9555 /* PersonalSettings */,
+				D0EA9F2E199113B2002DCBB0 /* MyClass */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -474,10 +528,26 @@
 		D0C70448198F594F00A234D7 /* tmp */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA9F2C19910F89002DCBB0 /* member.png */,
 				D0C7044E198F7F4900A234D7 /* teacherHead.png */,
 				D0C70449198F594F00A234D7 /* math.png */,
 			);
 			path = tmp;
+			sourceTree = "<group>";
+		};
+		D0CA9ED91990CA19001A9555 /* PersonalSettings */ = {
+			isa = PBXGroup;
+			children = (
+				C003179F197F8F3F0072551F /* PersonalVC.h */,
+				C00317A0197F8F3F0072551F /* PersonalVC.m */,
+				D0CA9EDA1990CA90001A9555 /* PersonSettingBaseVC.h */,
+				D0CA9EDB1990CA90001A9555 /* PersonSettingBaseVC.m */,
+				D0CA9EDD1990CB85001A9555 /* ChangeNickNameVC.h */,
+				D0CA9EDE1990CB85001A9555 /* ChangeNickNameVC.m */,
+				D0CA9EE01990CBA0001A9555 /* ChangePasswordVC.h */,
+				D0CA9EE11990CBA0001A9555 /* ChangePasswordVC.m */,
+			);
+			name = PersonalSettings;
 			sourceTree = "<group>";
 		};
 		D0CC0AEF1987D3DE002595F8 /* WBSegment */ = {
@@ -507,6 +577,17 @@
 				D0CC0AF81987D474002595F8 /* WBCombList.m */,
 			);
 			path = WBCombList;
+			sourceTree = "<group>";
+		};
+		D0DBEBAD19906DD300B01FCB /* ClassMsg */ = {
+			isa = PBXGroup;
+			children = (
+				D0DBEBAE19906DF600B01FCB /* ClassMsgCell.h */,
+				D0DBEBAF19906DF600B01FCB /* ClassMsgCell.m */,
+				D0CA9ED319908C9C001A9555 /* SchoolMsgCell.h */,
+				D0CA9ED419908C9C001A9555 /* SchoolMsgCell.m */,
+			);
+			name = ClassMsg;
 			sourceTree = "<group>";
 		};
 		D0E255C1197F450B00F45365 /* Library */ = {
@@ -558,6 +639,57 @@
 				D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */,
 			);
 			path = WBHTTPRequest;
+			sourceTree = "<group>";
+		};
+		D0EA9F2E199113B2002DCBB0 /* MyClass */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE14A91981EC5F00ED77E0 /* MyClassVC.h */,
+				D0CE14AA1981EC5F00ED77E0 /* MyClassVC.m */,
+				D0CA9EE31990ED21001A9555 /* MemberListCell.h */,
+				D0CA9EE41990ED21001A9555 /* MemberListCell.m */,
+			);
+			name = MyClass;
+			sourceTree = "<group>";
+		};
+		D0EA9F2F199113F4002DCBB0 /* AddressList */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA9F301991142F002DCBB0 /* AddressListVC.h */,
+				D0EA9F311991142F002DCBB0 /* AddressListVC.m */,
+				D0EA9F3E1991235A002DCBB0 /* AddressListItemCell.h */,
+				D0EA9F3F1991235A002DCBB0 /* AddressListItemCell.m */,
+			);
+			name = AddressList;
+			sourceTree = "<group>";
+		};
+		D0EA9F3319911484002DCBB0 /* ParentMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA9F3B19911E83002DCBB0 /* ParentMonitorVC.h */,
+				D0EA9F3C19911E83002DCBB0 /* ParentMonitorVC.m */,
+				D0EA9F34199114D6002DCBB0 /* MapVC.h */,
+				D0EA9F35199114D6002DCBB0 /* MapVC.m */,
+			);
+			name = ParentMonitor;
+			sourceTree = "<group>";
+		};
+		D0EA9F4119913255002DCBB0 /* MyFollow */ = {
+			isa = PBXGroup;
+			children = (
+				D0EA9F45199134B7002DCBB0 /* FollowVC.h */,
+				D0EA9F46199134B7002DCBB0 /* FollowVC.m */,
+				D0EA9F4219913493002DCBB0 /* FollowSubjectContainer.h */,
+				D0EA9F4319913493002DCBB0 /* FollowSubjectContainer.m */,
+			);
+			name = MyFollow;
+			sourceTree = "<group>";
+		};
+		D0F114251991C94400FE1A99 /* OrderList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OrderList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -664,6 +796,7 @@
 				D0407E90197A4C2200894414 /* logo.png in Resources */,
 				D061324C197A72DE00052FDC /* charger.png in Resources */,
 				D0407E99197A4CA100894414 /* 名师荟萃.png in Resources */,
+				D0EA9F2D19910F89002DCBB0 /* member.png in Resources */,
 				D0407E85197A26BD00894414 /* 消息1.png in Resources */,
 				D0407E48197A1B1200894414 /* Main.storyboard in Resources */,
 				D0407E9A197A4CA100894414 /* 微课超市.png in Resources */,
@@ -703,25 +836,38 @@
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
 				D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */,
 				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
+				D0CA9ED8199095B3001A9555 /* SearchResultCell.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
+				D0CA9EDF1990CB85001A9555 /* ChangeNickNameVC.m in Sources */,
+				D0CA9EE51990ED21001A9555 /* MemberListCell.m in Sources */,
+				D0EA9F4419913493002DCBB0 /* FollowSubjectContainer.m in Sources */,
 				D0C70447198F3A0000A234D7 /* RootVC.m in Sources */,
 				D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */,
 				D0407E45197A1B1200894414 /* AppDelegate.m in Sources */,
+				D0DBEBB019906DF600B01FCB /* ClassMsgCell.m in Sources */,
 				D0407EA2197A562600894414 /* HomeVC.m in Sources */,
+				D0EA9F401991235A002DCBB0 /* AddressListItemCell.m in Sources */,
 				D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */,
 				D0407EAB197A56EE00894414 /* LessonMarketVC.m in Sources */,
 				D0407E41197A1B1200894414 /* main.m in Sources */,
+				D0EA9F36199114D6002DCBB0 /* MapVC.m in Sources */,
 				D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */,
 				D0407EA8197A56D600894414 /* MyLessonVC.m in Sources */,
 				D06BCAD2198C8B070047ACC3 /* SchoolLessonCustomCell.m in Sources */,
 				D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
 				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
+				D0EA9F321991142F002DCBB0 /* AddressListVC.m in Sources */,
 				D0C076AE19893518004CB68D /* NSString+MD5.m in Sources */,
+				D0CA9EE21990CBA0001A9555 /* ChangePasswordVC.m in Sources */,
+				D0EA9F3D19911E83002DCBB0 /* ParentMonitorVC.m in Sources */,
+				D0CA9ED519908C9C001A9555 /* SchoolMsgCell.m in Sources */,
 				D0CE13AF198A0609002FA3A3 /* WBSegment.m in Sources */,
 				D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */,
 				D0CFF19D1988BB8800A6ABF2 /* WBCombListHeader.m in Sources */,
 				D0C7043619885D9B00EB4426 /* LoginBaseVC.m in Sources */,
+				D0CA9EDC1990CA90001A9555 /* PersonSettingBaseVC.m in Sources */,
+				D0EA9F47199134B7002DCBB0 /* FollowVC.m in Sources */,
 				D0E255D7197F6AD000F45365 /* LoginVC.m in Sources */,
 				D0407E8E197A482E00894414 /* BaseNavigationController.m in Sources */,
 			);

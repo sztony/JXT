@@ -34,7 +34,7 @@
                       [UIImage imageNamed:@"搜索2.png"],
                       [UIImage imageNamed:@"设置2.png"]];
     NSDictionary* attriDict1=[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:13],NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil];
-    NSDictionary* attriDict2=[NSDictionary dictionaryWithObjectsAndKeys:MAIN_COLOR,NSForegroundColorAttributeName,nil];
+    NSDictionary* attriDict2=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor cyanColor],NSForegroundColorAttributeName,nil];
    for(UITabBarItem* item in self.tabBar.items)
    {
        NSLog(@"item.tag:%d",item.tag);

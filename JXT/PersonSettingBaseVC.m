@@ -1,60 +1,52 @@
 //
-//  PersonalVC.m
+//  PersonSettingBaseVC.m
 //  JXT
 //
-//  Created by CW on 14-7-22.
+//  Created by 伍 兵 on 14-8-5.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "PersonalVC.h"
+#import "PersonSettingBaseVC.h"
 
-@interface PersonalVC ()
-{
-    GlobalDataManager* m;
-}
+@interface PersonSettingBaseVC ()
+
 @end
 
-@implementation PersonalVC
+@implementation PersonSettingBaseVC
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-     
     }
     return self;
 }
--(void)awakeFromNib
-{
-   
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    nickNameLabel.text=m.userNickName;
-}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    m = [GlobalDataManager sharedDataManager];
-    
-    NSLog(@"realName:%@",m.userRealName);
-    
-    
-    realNameLabel.text=m.userRealName;
-    schoolLabel.text=m.userSchoolName;
-    mobileLabel.text=m.userMobile;
-    
-    NSLog(@"xx:%@",realNameLabel.text);
-    
     // Do any additional setup after loading the view.
 }
-
+-(IBAction)sureBtnClicked:(id)sender
+{
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for(UIView * aView in  [self.view subviews])
+    {
+        if([aView isKindOfClass:[UITextField class]])
+        {
+            [aView resignFirstResponder];
+        }
+    }
+}
 /*
 #pragma mark - Navigation
 
