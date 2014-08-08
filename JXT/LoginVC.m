@@ -37,12 +37,25 @@
     GlobalDataManager * m=[GlobalDataManager sharedDataManager];
     
     NSLog(@"aDict:%@",aDict);
+    NSString* nickName;
+    if([aDict objectForKey:@"nickName"]==[NSNull null])
+    {
+        nickName=@"昵称";
+    }
+    else
+    {
+        nickName=[aDict objectForKey:@"nickName"];
+    }
+    if([aDict objectForKey:@"schoolName"]==[NSNull null])
+        m.userSchoolName=@"学校名称";
+    else
+        m.userSchoolName=[aDict objectForKey:@"schoolName"];
     
     m.userID=[aDict objectForKey:@"userId"];
     m.userMobile=[aDict objectForKey:@"mobile"];
     m.userRealName=[aDict objectForKey:@"realName"];
-    m.userNickName=[aDict objectForKey:@"nickName"];
-    m.userSchoolName=[aDict objectForKey:@"schoolName"];
+    m.userNickName=nickName;
+    
     m.userPic=[aDict objectForKey:@"userPic"];
     m.userBigPic=[aDict objectForKey:@"userBigPic"];
     

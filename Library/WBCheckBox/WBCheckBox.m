@@ -16,6 +16,12 @@
 @end
 @implementation WBCheckBox
 @synthesize invocation;
+@synthesize type;
+-(void)setType:(CheckBoxType)aType
+{
+    type=aType;
+    [self layoutUI];
+}
 //@synthesize borderColor,fillColor;
 -(UIColor*)borderColor
 {
@@ -27,8 +33,7 @@
     {
         [borderColor release];
         borderColor= [aBorderColor retain];
-        textLayer.foregroundColor=borderColor.CGColor;
-        [self setNeedsDisplay];
+        [self layoutUI];
     }
 }
 -(UIColor*)fillColor
@@ -41,21 +46,20 @@
     {
         [fillColor release];
         fillColor= [aFillColor retain];
-        [self setNeedsDisplay];
+        [self layoutUI];
     }
 }
 -(NSString*)title
 {
-    return textLayer.string;
+    return title;
 }
 -(void)setTitle:(NSString *)aTitle
 {
-    if(textLayer.string!=aTitle)
+    if(![title isEqualToString:aTitle])
     {
-        CGSize size=[aTitle sizeWithFont:[UIFont systemFontOfSize:fontSize]];
-        textLayer.frame=CGRectMake(height, (height-size.height)/2, size.width, size.height);
-        textLayer.string=aTitle;
-        self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, height+size.width, height);
+        [title release];
+        title= [aTitle retain];
+        [self layoutUI];
     }
 }
 -(BOOL)isChecked
@@ -67,34 +71,60 @@
     isChecked=aIsChecked;
     [self setNeedsDisplay];
 }
-- (id)initWithFrame:(CGRect)frame andTitle:(NSString*)aTitle fontSize:(NSInteger)aFontSize checkBoxType:(CheckBoxType)aType
+- (id)initWithFrame:(CGRect)frame
 {
-    CGSize size=[aTitle sizeWithFont:[UIFont systemFontOfSize:aFontSize]];
-    frame=CGRectMake(frame.origin.x, frame.origin.y, frame.size.height+size.width, frame.size.height);
     self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        width=frame.size.width;
-        height=frame.size.height;
-        borderWidth=height/10;
-        borderColor=[UIColor blackColor];
-        fillColor=[UIColor blueColor];
-        fontSize=aFontSize;
-        type=aType;
-        
-        textLayer=[[CATextLayer alloc] init];
-        textLayer.frame=CGRectMake(height, (height-size.height)/2, size.width, size.height);
-        textLayer.string=aTitle;
-        textLayer.foregroundColor=borderColor.CGColor;
-        textLayer.fontSize=fontSize;
-        textLayer.backgroundColor=[UIColor clearColor].CGColor;
-        [self.layer addSublayer:textLayer];
-        
-        self.backgroundColor=[UIColor clearColor];
+    if (self)
+    {
+        [self dataInit];
+        [self layoutUI];
     }
     return self;
 }
-
+-(void)dataInit
+{
+    fontSize=self.frame.size.height*0.9;
+    type=kCheckBoxTypeRect;
+    title=@"";
+    
+    borderColor=[UIColor blackColor];
+    fillColor=[UIColor blueColor];
+    
+    textLayer=[[CATextLayer alloc] init];
+    textLayer.backgroundColor=[UIColor clearColor].CGColor;
+    [self.layer addSublayer:textLayer];
+    
+    self.backgroundColor=[UIColor clearColor];
+}
+-(void)layoutUI
+{
+    CGSize size=[title sizeWithFont:[UIFont systemFontOfSize:fontSize]];
+    self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.height+size.width, self.frame.size.height);
+    
+    //self.layer.borderColor=[UIColor cyanColor].CGColor;
+    //self.layer.borderWidth=1;
+    width=self.frame.size.width;
+    height=self.frame.size.height;
+    borderWidth=height/10;
+    textLayer.frame=CGRectMake(height, (height-size.height)/2, size.width, size.height);
+    textLayer.string=title;
+    textLayer.foregroundColor=borderColor.CGColor;
+    textLayer.fontSize=fontSize;
+    textLayer.foregroundColor=borderColor.CGColor;
+    
+    [self setNeedsDisplay];
+}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self=[super initWithCoder:aDecoder];
+    if(self)
+    {
+        
+        [self dataInit];
+        [self layoutUI];
+    }
+    return self;
+}
 -(void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents
 {
     _target=target;
@@ -112,8 +142,8 @@
 }
 -(BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    NSLog(@"tracking");
-    if(controlEvent==UIControlEventTouchUpInside)
+    //NSLog(@"tracking");
+    if(controlEvent==UIControlEventValueChanged)
        [self.invocation invoke];
     return YES;
 }
@@ -123,9 +153,9 @@
 }
 -(void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    if(controlEvent==UIControlEventTouchUpOutside)
-        [self.invocation invoke];
-    NSLog(@"end track");
+//    if(controlEvent==UIControlEventValueChanged)
+//        [self.invocation invoke];
+//    NSLog(@"end track");
 }
 -(void)dealloc
 {
@@ -156,6 +186,7 @@
     CGContextSetFillColorWithColor(context, fillColor.CGColor);
     // Drawing code
     CGRect borderRect=CGRectMake(borderWidth/2, borderWidth/2, height-borderWidth, height-borderWidth);
+    //NSLog(@"borderRect:%@",NSStringFromCGRect(borderRect));
     if(type==kCheckBoxTypeRect)
         CGContextStrokeRect(context, borderRect);
     else

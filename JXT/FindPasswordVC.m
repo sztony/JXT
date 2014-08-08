@@ -47,10 +47,6 @@
         //成功
         if(!connectionError)
         {
-            //发送的状态
-            dispatch_async(dispatch_get_main_queue(), ^{
-                statusLabel2.text=@"发送成功";
-            });
             //解析
             NSError* error=nil;
             NSDictionary * dict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
@@ -82,7 +78,7 @@
         else
         {
             dispatch_async(dispatch_get_main_queue(), ^{
-                statusLabel2.text=[NSString stringWithFormat:@"发送错误:%@",connectionError];
+                statusLabel1.text=[NSString stringWithFormat:@"发送错误:%@",connectionError];
             });
         }
         

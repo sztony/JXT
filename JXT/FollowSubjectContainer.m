@@ -14,6 +14,7 @@
 }
 @end
 @implementation FollowSubjectContainer
+@synthesize delegate;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -23,16 +24,69 @@
     }
     return self;
 }
+-(void)dataInit
+{
+    width=self.frame.size.width;
+    height=self.frame.size.height;
+    subjectsArray =[[NSMutableArray alloc] initWithCapacity:0];
+}
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self=[super initWithCoder:aDecoder];
+    if(self)
+    {
+        [self dataInit];
+    }
+    return self;
+}
+-(void)updateSubjectsArrayWithArray:(NSArray*)aArray
+{
+    [subjectsArray removeAllObjects];
+    [subjectsArray addObjectsFromArray:aArray];
+    
+    [self layoutCheckBox];
+}
+-(void)allCheck:(BOOL)isCheck
+{
+    for(WBCheckBox* box in self.subviews)
+    {
+        box.isChecked=isCheck;
+    }
+}
+-(NSString*)valueString
+{
+    NSMutableString* valueString=[[NSMutableString alloc] init];
+    for(WBCheckBox* box in self.subviews)
+    {
+        if(box.isChecked)
+        {
+            [valueString appendString:@","];
+            [valueString appendFormat:@"%d",box.tag];
+        }
+        
+    }
+    
+    NSString* needString=@"";
+    if(valueString.length>0)
+        needString=[valueString substringFromIndex:1];
+    [valueString release];
+    NSLog(@"needString:%@",needString);
+    return needString;
+}
 -(void)layoutCheckBox
 {
-   
-     NSArray* subjects=@[@"语文",@"数学",@"外语",@"物理",@"化学",@"生物",@"历史",@"政治",@"地理"];
-    for(int i=0;i<9;i++)
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    for(int i=0;i<subjectsArray.count;i++)
     {
-        CGFloat x=20+(i%5)*(40+10);
+        NSDictionary* aDict=[subjectsArray objectAtIndex:i];
+        NSString * title=[aDict objectForKey:@"subjectName"];
+        NSString * subjectID=[aDict objectForKey:@"subjectId"];
+        CGFloat x=20+(i%5)*(30+18);
         CGFloat y=20+i/5*40;
-        WBCheckBox* checkBox=[[WBCheckBox alloc] initWithFrame:CGRectMake(x, y, 40, 20) andTitle:[subjects objectAtIndex:i] fontSize:15 checkBoxType:kCheckBoxTypeRect];
-        [checkBox addTarget:self action:@selector(check:) forControlEvents:UIControlEventTouchUpOutside];
+        WBCheckBox* checkBox=[[WBCheckBox alloc] initWithFrame:CGRectMake(x, y, 40, 15)];
+        checkBox.title=title;
+        checkBox.tag=[subjectID intValue];
+        [checkBox addTarget:self action:@selector(check:) forControlEvents:UIControlEventValueChanged];
         //checkBox.borderColor=[UIColor grayColor];
         checkBox.fillColor=MAIN_COLOR;
         [self addSubview:checkBox];
@@ -43,17 +97,11 @@
 {
     //NSLog(@"check:%d",arg.isChecked);
     arg.isChecked=!arg.isChecked;
-}
--(id)initWithCoder:(NSCoder *)aDecoder
-{
-    self=[super initWithCoder:aDecoder];
-    if(self)
+    
+    if([delegate respondsToSelector:@selector(SubjectContainerClickedCheckBox:)])
     {
-        width=self.frame.size.width;
-        height=self.frame.size.height;
-        [self layoutCheckBox];
+        [delegate SubjectContainerClickedCheckBox:arg];
     }
-    return self;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

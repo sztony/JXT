@@ -7,7 +7,7 @@
 //
 
 #import "FetchAreaBaseTableVC.h"
-
+#import "FetchFollowVC.h"
 @interface FetchPhaseVC : FetchAreaBaseTableVC
 
 @end

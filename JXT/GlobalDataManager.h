@@ -19,6 +19,8 @@
 @property(nonatomic,retain) NSString* userRealName;
 @property(nonatomic,retain) NSString* userNickName;
 @property(nonatomic,retain) NSString* userSchoolName;
+@property(nonatomic,retain) NSString* userSchoolId;
+@property(nonatomic,retain) NSString* userPhaseId;
 @property(nonatomic,retain) NSString* userPic;
 @property(nonatomic,retain) NSString* userBigPic;
 

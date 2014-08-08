@@ -99,7 +99,7 @@
 }
 -(IBAction)registerBtnClicked:(id)sender
 {
-    /*
+    
     if(nameField.text.length==0)
     {
         statusLabel.text=@"请输入姓名!";
@@ -125,7 +125,7 @@
         statusLabel.text=@"验证码错误!";
         return;
     }
-     */
+     
     //保存待注册
     dataCenter.userRealName=nameField.text;
     dataCenter.userMobile=phoneNumField.text;

@@ -1,19 +1,19 @@
 //
-//  FollowVC.m
+//  FollowBaseVC.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-8-5.
+//  Created by 伍 兵 on 14-8-8.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "FollowVC.h"
+#import "FollowBaseVC.h"
 
-@interface FollowVC ()
+@interface FollowBaseVC ()
 
 @end
 
-@implementation FollowVC
-
+@implementation FollowBaseVC
+@synthesize schoolId,phaseId;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,19 +22,26 @@
     }
     return self;
 }
-
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    self=[super initWithCoder:aDecoder];
+    if(self)
+    {
+        subjectsArray=[[NSMutableArray alloc] initWithCapacity:0];
+        teachersArray=[[NSMutableArray alloc] initWithCapacity:0];
+    }
+    return self;
+}
+-(void)dealloc
+{
+    [subjectsArray release];
+    [teachersArray release];
+    [super dealloc];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-    return 1;
-}
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return 6;
 }
 
 - (void)didReceiveMemoryWarning

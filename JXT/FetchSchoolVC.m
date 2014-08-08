@@ -97,10 +97,11 @@
     NSDictionary* tmpDict=[dataArray objectAtIndex:indexPath.row];
     FetchAreaBaseTableVC* fetchVC= [self.storyboard instantiateViewControllerWithIdentifier:@"FetchPhaseVCID"];
 #if USE_TEST_DATA
-    fetchVC.areaID=@"10";
+    fetchVC.areaID=@"5";
 #else
     fetchVC.areaID= [tmpDict objectForKey:@"schoolId"];
 #endif
+    [dataCenter setUserSchoolId:fetchVC.areaID];
     [self.navigationController pushViewController:fetchVC animated:YES];
     //[self performSegueWithIdentifier:@"fetchCitySegue" sender:nil];
 }

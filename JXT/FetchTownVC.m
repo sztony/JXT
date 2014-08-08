@@ -89,9 +89,11 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary* tmpDict=[dataArray objectAtIndex:indexPath.row];
+
     FetchAreaBaseTableVC* fetchVC= [self.storyboard instantiateViewControllerWithIdentifier:@"FetchSchoolVCID"];
-#if  USE_TEST_DATA
-    fetchVC.areaID= @"41";
+#if  0
+    fetchVC.areaID= @"10";
 #else
     
      fetchVC.areaID= [tmpDict objectForKey:@"areaId"];

@@ -69,7 +69,6 @@
 		D0CA9EE21990CBA0001A9555 /* ChangePasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EE11990CBA0001A9555 /* ChangePasswordVC.m */; };
 		D0CA9EE51990ED21001A9555 /* MemberListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CA9EE41990ED21001A9555 /* MemberListCell.m */; };
 		D0CC0AEE1987D2CD002595F8 /* FulFillInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */; };
-		D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF51987D474002595F8 /* WBCheckBox.m */; };
 		D0CC0AFA1987D474002595F8 /* WBCombList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AF81987D474002595F8 /* WBCombList.m */; };
 		D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC0AFD1987F37D002595F8 /* GlobalDataManager.m */; };
 		D0CE13AF198A0609002FA3A3 /* WBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE13AE198A0609002FA3A3 /* WBSegment.m */; };
@@ -92,6 +91,10 @@
 		D0E255DA197F831500F45365 /* RegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255D9197F831500F45365 /* RegisterVC.m */; };
 		D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E255DC197F832900F45365 /* FindPasswordVC.m */; };
 		D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */; };
+		D0EA9516199476E200767ECC /* RootTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9515199476E200767ECC /* RootTableVC.m */; };
+		D0EA951919947AAB00767ECC /* FollowBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA951819947AAB00767ECC /* FollowBaseVC.m */; };
+		D0EA951C1994882100767ECC /* WBCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA951B1994882100767ECC /* WBCheckBox.m */; };
+		D0EA951F19948C1500767ECC /* FetchFollowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA951E19948C1500767ECC /* FetchFollowVC.m */; };
 		D0EA9F2D19910F89002DCBB0 /* member.png in Resources */ = {isa = PBXBuildFile; fileRef = D0EA9F2C19910F89002DCBB0 /* member.png */; };
 		D0EA9F321991142F002DCBB0 /* AddressListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F311991142F002DCBB0 /* AddressListVC.m */; };
 		D0EA9F36199114D6002DCBB0 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EA9F35199114D6002DCBB0 /* MapVC.m */; };
@@ -212,8 +215,6 @@
 		D0CA9EE41990ED21001A9555 /* MemberListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberListCell.m; sourceTree = "<group>"; };
 		D0CC0AEC1987D2CD002595F8 /* FulFillInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FulFillInfoVC.h; sourceTree = "<group>"; };
 		D0CC0AED1987D2CD002595F8 /* FulFillInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FulFillInfoVC.m; sourceTree = "<group>"; };
-		D0CC0AF41987D474002595F8 /* WBCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCheckBox.h; sourceTree = "<group>"; };
-		D0CC0AF51987D474002595F8 /* WBCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCheckBox.m; sourceTree = "<group>"; };
 		D0CC0AF71987D474002595F8 /* WBCombList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCombList.h; sourceTree = "<group>"; };
 		D0CC0AF81987D474002595F8 /* WBCombList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCombList.m; sourceTree = "<group>"; };
 		D0CC0AFB1987E312002595F8 /* APPConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPConfig.h; sourceTree = "<group>"; };
@@ -250,6 +251,14 @@
 		D0E255DC197F832900F45365 /* FindPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordVC.m; sourceTree = "<group>"; };
 		D0E34176198B1CE7009DEBF1 /* WBHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHTTPRequest.h; sourceTree = "<group>"; };
 		D0E34177198B1CE7009DEBF1 /* WBHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBHTTPRequest.m; sourceTree = "<group>"; };
+		D0EA9514199476E200767ECC /* RootTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableVC.h; sourceTree = "<group>"; };
+		D0EA9515199476E200767ECC /* RootTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableVC.m; sourceTree = "<group>"; };
+		D0EA951719947AAB00767ECC /* FollowBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowBaseVC.h; sourceTree = "<group>"; };
+		D0EA951819947AAB00767ECC /* FollowBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowBaseVC.m; sourceTree = "<group>"; };
+		D0EA951A1994882100767ECC /* WBCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBCheckBox.h; sourceTree = "<group>"; };
+		D0EA951B1994882100767ECC /* WBCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBCheckBox.m; sourceTree = "<group>"; };
+		D0EA951D19948C1500767ECC /* FetchFollowVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchFollowVC.h; sourceTree = "<group>"; };
+		D0EA951E19948C1500767ECC /* FetchFollowVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchFollowVC.m; sourceTree = "<group>"; };
 		D0EA9F2C19910F89002DCBB0 /* member.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member.png; sourceTree = "<group>"; };
 		D0EA9F301991142F002DCBB0 /* AddressListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressListVC.h; sourceTree = "<group>"; };
 		D0EA9F311991142F002DCBB0 /* AddressListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressListVC.m; sourceTree = "<group>"; };
@@ -363,6 +372,8 @@
 				D0407E8D197A482E00894414 /* BaseNavigationController.m */,
 				D0C70445198F3A0000A234D7 /* RootVC.h */,
 				D0C70446198F3A0000A234D7 /* RootVC.m */,
+				D0EA9514199476E200767ECC /* RootTableVC.h */,
+				D0EA9515199476E200767ECC /* RootTableVC.m */,
 				D0E255D4197F6AB500F45365 /* Login */,
 				D0407E9F197A55E600894414 /* Home */,
 				D0407EA4197A565300894414 /* Message */,
@@ -596,8 +607,8 @@
 		D0CC0AF31987D474002595F8 /* WBCheckBox */ = {
 			isa = PBXGroup;
 			children = (
-				D0CC0AF41987D474002595F8 /* WBCheckBox.h */,
-				D0CC0AF51987D474002595F8 /* WBCheckBox.m */,
+				D0EA951A1994882100767ECC /* WBCheckBox.h */,
+				D0EA951B1994882100767ECC /* WBCheckBox.m */,
 			);
 			path = WBCheckBox;
 			sourceTree = "<group>";
@@ -710,6 +721,8 @@
 		D0EA9F4119913255002DCBB0 /* MyFollow */ = {
 			isa = PBXGroup;
 			children = (
+				D0EA951719947AAB00767ECC /* FollowBaseVC.h */,
+				D0EA951819947AAB00767ECC /* FollowBaseVC.m */,
 				D0EA9F45199134B7002DCBB0 /* FollowVC.h */,
 				D0EA9F46199134B7002DCBB0 /* FollowVC.m */,
 				D0EA9F4219913493002DCBB0 /* FollowSubjectContainer.h */,
@@ -779,6 +792,8 @@
 				D0F791D21992753800B37A9A /* FetchSchoolVC.m */,
 				D0F791D41992754D00B37A9A /* FetchPhaseVC.h */,
 				D0F791D51992754D00B37A9A /* FetchPhaseVC.m */,
+				D0EA951D19948C1500767ECC /* FetchFollowVC.h */,
+				D0EA951E19948C1500767ECC /* FetchFollowVC.m */,
 			);
 			name = NavigationMethod;
 			sourceTree = "<group>";
@@ -927,7 +942,6 @@
 				D0C7044D198F7AF700A234D7 /* HomeWorkTopView.m in Sources */,
 				D0407EB1197A6E6A00894414 /* SettingsVC.m in Sources */,
 				D0407E8B197A394900894414 /* RootTabBarController.m in Sources */,
-				D0CC0AF91987D474002595F8 /* WBCheckBox.m in Sources */,
 				D0E1CD87197EBBFB00733568 /* BaseVC.m in Sources */,
 				D0CA9ED8199095B3001A9555 /* SearchResultCell.m in Sources */,
 				D0407EAE197A571400894414 /* TeacherVC.m in Sources */,
@@ -936,9 +950,11 @@
 				D0F791D61992754D00B37A9A /* FetchPhaseVC.m in Sources */,
 				D0CA9EE51990ED21001A9555 /* MemberListCell.m in Sources */,
 				D0EA9F4419913493002DCBB0 /* FollowSubjectContainer.m in Sources */,
+				D0EA951919947AAB00767ECC /* FollowBaseVC.m in Sources */,
 				D0C70447198F3A0000A234D7 /* RootVC.m in Sources */,
 				D0CC0AFE1987F37D002595F8 /* GlobalDataManager.m in Sources */,
 				D0F791D01992751D00B37A9A /* FetchTownVC.m in Sources */,
+				D0EA951C1994882100767ECC /* WBCheckBox.m in Sources */,
 				D0407E45197A1B1200894414 /* AppDelegate.m in Sources */,
 				D0DBEBB019906DF600B01FCB /* ClassMsgCell.m in Sources */,
 				D0407EA2197A562600894414 /* HomeVC.m in Sources */,
@@ -947,6 +963,7 @@
 				D0F114341991D64800FE1A99 /* CartVC.m in Sources */,
 				D0E255DD197F832900F45365 /* FindPasswordVC.m in Sources */,
 				D0407EAB197A56EE00894414 /* LessonMarketVC.m in Sources */,
+				D0EA951F19948C1500767ECC /* FetchFollowVC.m in Sources */,
 				D0407E41197A1B1200894414 /* main.m in Sources */,
 				D0EA9F36199114D6002DCBB0 /* MapVC.m in Sources */,
 				D0E1CD7E197EB10800733568 /* SearchViewController.m in Sources */,
@@ -955,6 +972,7 @@
 				D0E34178198B1CE7009DEBF1 /* WBHTTPRequest.m in Sources */,
 				D0F791D31992753800B37A9A /* FetchSchoolVC.m in Sources */,
 				D0E255DA197F831500F45365 /* RegisterVC.m in Sources */,
+				D0EA9516199476E200767ECC /* RootTableVC.m in Sources */,
 				D0F1142B1991CC0A00FE1A99 /* OrderListCell.m in Sources */,
 				C00317A1197F8F3F0072551F /* PersonalVC.m in Sources */,
 				D0EA9F321991142F002DCBB0 /* AddressListVC.m in Sources */,

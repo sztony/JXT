@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "WBCheckBox.h"
-@interface FollowSubjectContainer : UIView
 
+@protocol FollowSubjectContainerDelegate <NSObject>
+-(void)SubjectContainerClickedCheckBox:(WBCheckBox*)aCheckBox;
+@end
+
+
+@interface FollowSubjectContainer : UIView
+{
+    NSMutableArray* subjectsArray;
+   IBOutlet id<FollowSubjectContainerDelegate> delegate;
+}
+@property(nonatomic,assign) IBOutlet id<FollowSubjectContainerDelegate> delegate;
+-(NSString*)valueString;
+-(void)allCheck:(BOOL)isCheck;
+-(void)updateSubjectsArrayWithArray:(NSArray*)aArray;
 @end

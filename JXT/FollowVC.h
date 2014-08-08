@@ -6,10 +6,9 @@
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "RootVC.h"
-#import "FollowSubjectContainer.h"
-@interface FollowVC : RootVC
+#import "FollowBaseVC.h"
+
+@interface FollowVC : FollowBaseVC
 {
-    IBOutlet FollowSubjectContainer * subjectsContainer;
 }
 @end

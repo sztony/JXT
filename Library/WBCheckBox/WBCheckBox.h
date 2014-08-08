@@ -39,6 +39,5 @@ typedef enum {
 @property(nonatomic,assign) BOOL isChecked;
 @property(nonatomic,retain) UIColor*  borderColor;
 @property(nonatomic,retain) UIColor*  fillColor;
-
-- (id)initWithFrame:(CGRect)frame andTitle:(NSString*)aTitle fontSize:(NSInteger)aFontSize checkBoxType:(CheckBoxType)aType;
+@property(nonatomic,assign) CheckBoxType type;
 @end

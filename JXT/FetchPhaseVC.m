@@ -93,7 +93,15 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary* tmpDict=[dataArray objectAtIndex:indexPath.row];
+    FetchFollowVC* fetchVC= [self.storyboard instantiateViewControllerWithIdentifier:@"FetchFollowVCID"];
+#if USE_TEST_DATA
+    [dataCenter setUserPhaseId:@"2"];
+#else
+    [dataCenter setUserPhaseId:[tmpDict objectForKey:@"phaseId"]];
+#endif
     
+    [self.navigationController pushViewController:fetchVC animated:YES];
    
 }
 - (void)viewDidLoad
