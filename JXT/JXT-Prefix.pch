@@ -33,4 +33,8 @@
 //tag  define
 #define TAG_ContentTable 9
 
+//本地化key
+#define User_Mobile_Key @"userMobileKey"
+#define User_Password_Key @"userPasswordKey"
+
 

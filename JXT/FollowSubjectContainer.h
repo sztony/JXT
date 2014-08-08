@@ -21,6 +21,7 @@
 }
 @property(nonatomic,assign) IBOutlet id<FollowSubjectContainerDelegate> delegate;
 -(NSString*)valueString;
+-(NSString*)allValueString;
 -(void)allCheck:(BOOL)isCheck;
 -(void)updateSubjectsArrayWithArray:(NSArray*)aArray;
 @end

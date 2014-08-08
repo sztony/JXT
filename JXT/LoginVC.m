@@ -29,6 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    passwordField.secureTextEntry=YES;
+    nameField.text=[[NSUserDefaults standardUserDefaults] objectForKey:User_Mobile_Key];
+    passwordField.text=[[NSUserDefaults standardUserDefaults] objectForKey:User_Password_Key];
     //self.navigationController.navigationBar.hidden=YES;
     // Do any additional setup after loading the view.
 }
@@ -91,11 +94,17 @@
                 });
                 //NSString* msgCode=[dict objectForKey:@"msgcode"];
                 NSDictionary* userInfoDict=[[dict objectForKey:@"result"] objectForKey:@"userInfo"];
-                //保存用户数据
-                [self saveUserInfoDictWithDict:userInfoDict];
+                
                 BOOL status=[[dict valueForKey:@"success"] boolValue];
                 if(status&&[msg isEqualToString:@"登录成功"])
                 {
+                    //保存用户数据
+                    [self saveUserInfoDictWithDict:userInfoDict];
+                    //保存上次成功登录的账号
+                    [[NSUserDefaults standardUserDefaults] setObject: nameField.text forKey:User_Mobile_Key];
+                    [[NSUserDefaults standardUserDefaults] setObject:passwordField.text forKey:User_Password_Key];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                    
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self dismissViewControllerAnimated:YES completion:^{
                         }];

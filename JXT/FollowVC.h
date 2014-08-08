@@ -8,7 +8,9 @@
 
 #import "FollowBaseVC.h"
 
-@interface FollowVC : FollowBaseVC
+@interface FollowVC : FollowBaseVC<FollowSubjectContainerDelegate>
 {
+    IBOutlet WBCheckBox* checkBox;
+    IBOutlet UIButton* addBtn;
 }
 @end

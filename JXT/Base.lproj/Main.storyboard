@@ -224,7 +224,7 @@
                                 <rect key="frame" x="20" y="226" width="42" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="17012062931" placeholder="请输入用户名" minimumFontSize="17" id="5ZH-tu-cSh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" minimumFontSize="17" id="5ZH-tu-cSh">
                                 <rect key="frame" x="70" y="232" width="226" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -238,7 +238,7 @@
                                 <rect key="frame" x="24" y="315" width="42" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="111111" placeholder="请输入密码" minimumFontSize="17" id="0ty-uq-zkV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入密码" minimumFontSize="17" id="0ty-uq-zkV">
                                 <rect key="frame" x="74" y="321" width="222" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2329,13 +2329,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" id="T1g-R5-ZMq" customClass="FollowSubjectContainer">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="T1g-R5-ZMq" customClass="FollowSubjectContainer">
                                 <rect key="frame" x="20" y="114" width="280" height="105"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zTt-e6-WSH" id="fHm-FZ-WYH"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zpq-jG-CAm">
-                                <rect key="frame" x="254" y="76" width="30" height="30"/>
+                                <rect key="frame" x="223" y="76" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="全选">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2369,11 +2372,18 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" id="FPZ-lM-Bex" customClass="WBCheckBox">
+                                <rect key="frame" x="261" y="80" width="24" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="我的关注" id="U9e-Lx-jfq"/>
                     <connections>
+                        <outlet property="addBtn" destination="ztT-DC-ecE" id="E2M-ej-C74"/>
+                        <outlet property="checkBox" destination="FPZ-lM-Bex" id="kiI-Fy-eZr"/>
                         <outlet property="subjectsContainer" destination="T1g-R5-ZMq" id="v8Q-aP-a8H"/>
                         <outlet property="teacherContainer" destination="huU-Wb-mIC" id="Zqh-Qx-9cC"/>
                     </connections>

@@ -53,6 +53,26 @@
         box.isChecked=isCheck;
     }
 }
+-(NSString*)allValueString
+{
+    NSMutableString* valueString=[[NSMutableString alloc] init];
+    for(WBCheckBox* box in self.subviews)
+    {
+        //if(box.isChecked)
+        {
+            [valueString appendString:@","];
+            [valueString appendFormat:@"%d",box.tag];
+        }
+        
+    }
+    
+    NSString* needString=@"";
+    if(valueString.length>0)
+        needString=[valueString substringFromIndex:1];
+    [valueString release];
+    NSLog(@"allValueString:%@",needString);
+    return needString;
+}
 -(NSString*)valueString
 {
     NSMutableString* valueString=[[NSMutableString alloc] init];
@@ -81,6 +101,7 @@
         NSDictionary* aDict=[subjectsArray objectAtIndex:i];
         NSString * title=[aDict objectForKey:@"subjectName"];
         NSString * subjectID=[aDict objectForKey:@"subjectId"];
+        NSString * status =[aDict objectForKey:@"followStatus"];
         CGFloat x=20+(i%5)*(30+18);
         CGFloat y=20+i/5*40;
         WBCheckBox* checkBox=[[WBCheckBox alloc] initWithFrame:CGRectMake(x, y, 40, 15)];
@@ -88,6 +109,7 @@
         checkBox.tag=[subjectID intValue];
         [checkBox addTarget:self action:@selector(check:) forControlEvents:UIControlEventValueChanged];
         //checkBox.borderColor=[UIColor grayColor];
+        checkBox.isChecked=[status isEqualToString:@"1"]?YES:NO;
         checkBox.fillColor=MAIN_COLOR;
         [self addSubview:checkBox];
         [checkBox release];

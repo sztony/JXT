@@ -22,21 +22,161 @@
     }
     return self;
 }
-
+-(void)fetchFollowInfo
+{
+    //URL
+    NSURL* url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_getUserFollowInfo]];
+    //参数
+    NSMutableDictionary* dict=[[NSMutableDictionary alloc] init];
+    [dict setObject:[dataCenter userID] forKey:@"userId"];
+   
+    //请求
+    [WBHTTPRequest sendRequestWithURL:url parameterDict:dict type:kWBHTTPRequestPOSTType  queue:[dataCenter globalTaskQueue] completeHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSLog(@"error:%@",connectionError);
+        NSLog(@"data:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        //网络连接错误
+        if(connectionError)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //statusLabel.text=[NSString stringWithFormat:@"连接错误:%@",connectionError];
+                return ;
+            });
+        }
+        //操作成功与否检测
+        //        Boolean status=[[dict valueForKey:@"success"] boolValue];
+        //        NSLog(@"value:%@",[dict valueForKey:@"success"]);
+        //        NSLog(@"status:%d",status);
+        //        if(!status)
+        //        {
+        //            dispatch_async(dispatch_get_main_queue(), ^{
+        //                NSLog(@"操作失败!");
+        //                alertLabel.text=@"操作失败!";
+        //                return ;
+        //            });
+        //        }
+        NSError* error=nil;
+        NSDictionary * backDataDict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        NSLog(@"dict:%@",backDataDict);
+        NSDictionary* resultDict=[backDataDict objectForKey:@"result"];
+        
+        //NSLog(@"areaList:%@",schoolArray);
+        if(!error)
+        {
+            //消息检测
+            NSString* msg=[backDataDict objectForKey:@"msg"];
+            if([msg hasPrefix:@"操作成功"])
+            {
+                
+#if 0
+                
+                [subjectsArray addObjectsFromArray:@[                                          @{@"subjectName":@"语文",@"subjectId":@"1"},
+                                                                                               @{@"subjectName":@"数学",@"subjectId":@"2"},
+                                                                                               @{@"subjectName":@"外语",@"subjectId":@"3"},
+                                                                                               @{@"subjectName":@"物理",@"subjectId":@"4"},
+                                                                                               @{@"subjectName":@"化学",@"subjectId":@"5"}]];
+#else
+                [subjectsArray addObjectsFromArray:[resultDict objectForKey:@"subjectList"]];
+                [teachersArray  addObjectsFromArray:[resultDict objectForKey:@"teacherList"]];
+#endif
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"%@",msg);
+                    [subjectsContainer updateSubjectsArrayWithArray:subjectsArray];//科目
+                    [teacherContainer reloadData];//教师
+                });
+            }
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //statusLabel.text=@"操作失败!";
+            });
+        }
+    }];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self fetchFollowInfo];
+    
+    [checkBox addTarget:self action:@selector(selectAllSubjects:) forControlEvents:UIControlEventValueChanged];
     // Do any additional setup after loading the view.
 }
--(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+-(void)selectAllSubjects:(WBCheckBox*)aCheckBox
 {
-    return 1;
+    aCheckBox.isChecked=!aCheckBox.isChecked;
+    [subjectsContainer allCheck:aCheckBox.isChecked];
+    
+    [self followSubject:[subjectsContainer allValueString] orNot:aCheckBox.isChecked];
 }
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+-(void)followSubject:(NSString*)aSubjectId orNot:(BOOL)wantFollow
 {
-    return 6;
+    //URL
+    NSString* urlSuffix=wantFollow?URL_addUserFollowSubject:URL_delUserFollowSubject;
+    NSURL* url=[NSURL URLWithString:[HOST_URL stringByAppendingString:urlSuffix]];
+    //参数
+    NSMutableDictionary* dict=[[NSMutableDictionary alloc] init];
+    [dict setObject:dataCenter.userID forKey:@"userId"];
+    [dict setObject:aSubjectId forKey:@"subjectIds"];
+    
+    //请求
+    [WBHTTPRequest sendRequestWithURL:url parameterDict:dict type:kWBHTTPRequestPOSTType  queue:[dataCenter globalTaskQueue] completeHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        NSLog(@"error:%@",connectionError);
+        NSLog(@"data:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        
+        //网络连接错误
+        if(connectionError)
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //statusLabel.text=[NSString stringWithFormat:@"连接错误:%@",connectionError];
+                return ;
+            });
+        }
+        //操作成功与否检测
+        //        Boolean status=[[dict valueForKey:@"success"] boolValue];
+        //        NSLog(@"value:%@",[dict valueForKey:@"success"]);
+        //        NSLog(@"status:%d",status);
+        //        if(!status)
+        //        {
+        //            dispatch_async(dispatch_get_main_queue(), ^{
+        //                NSLog(@"操作失败!");
+        //                alertLabel.text=@"操作失败!";
+        //                return ;
+        //            });
+        //        }
+        NSError* error=nil;
+        NSDictionary * backDataDict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+        NSLog(@"dict:%@",backDataDict);
+        NSDictionary* resultDict=[backDataDict objectForKey:@"result"];
+        
+        //NSLog(@"areaList:%@",schoolArray);
+        if(!error)
+        {
+            //消息检测
+            NSString* msg=[backDataDict objectForKey:@"msg"];
+            if([msg hasPrefix:@"操作成功"])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    //NSLog(@"%@",msg);
+                });
+            }
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                //statusLabel.text=@"操作失败!";
+            });
+        }
+    }];
 }
-
+-(void)SubjectContainerClickedCheckBox:(WBCheckBox *)aCheckBox
+{
+    [self followSubject:[NSString stringWithFormat:@"%d",aCheckBox.tag] orNot:aCheckBox.isChecked];
+}
+-(IBAction)addBtnClicked:(id)sender
+{
+    
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
