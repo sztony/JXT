@@ -7,7 +7,7 @@
 //
 
 #import "FollowBaseVC.h"
-
+#import "RegisterFollowTeacherCell.h"
 @interface FetchFollowVC : FollowBaseVC<FollowSubjectContainerDelegate>
 {
     IBOutlet WBCheckBox* checkBox1;

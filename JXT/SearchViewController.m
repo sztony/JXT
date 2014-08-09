@@ -201,7 +201,10 @@
     return cell;
 }
 
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [searchBar resignFirstResponder];
+}
 -(void)dealloc
 {
     [dataArray release];

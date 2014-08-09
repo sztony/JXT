@@ -87,8 +87,8 @@
     type=kCheckBoxTypeRect;
     title=@"";
     
-    borderColor=[UIColor blackColor];
-    fillColor=[UIColor blueColor];
+    borderColor=[WBCheckBox_Default_Border_Color retain];
+    fillColor=[WBCheckBox_Default_Fill_Color retain];
     
     textLayer=[[CATextLayer alloc] init];
     textLayer.backgroundColor=[UIColor clearColor].CGColor;

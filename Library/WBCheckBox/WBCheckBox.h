@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#define WBCheckBox_Default_Fill_Color  MAIN_COLOR
+#define WBCheckBox_Default_Border_Color [UIColor blackColor]
+
 typedef enum {
     kCheckBoxTypeRect,
     kCheckBoxTypeRound

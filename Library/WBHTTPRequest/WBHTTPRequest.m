@@ -12,6 +12,7 @@
 +(void)sendRequestWithURL:(NSURL*)aRUL parameterDict:(NSDictionary*)pDict type:(WBHTTPRequestType)type queue:(NSOperationQueue*)aQueue completeHandler:(void (^)(NSURLResponse* response, NSData* data, NSError* connectionError))handler
 {
     NSMutableURLRequest* request=[NSMutableURLRequest requestWithURL:aRUL];
+    NSLog(@"URL:%@",aRUL);
     if(type == kWBHTTPRequestPOSTType)
     {
         //拼串

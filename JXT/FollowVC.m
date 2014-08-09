@@ -67,13 +67,15 @@
             if([msg hasPrefix:@"操作成功"])
             {
                 
-#if 0
-                
-                [subjectsArray addObjectsFromArray:@[                                          @{@"subjectName":@"语文",@"subjectId":@"1"},
-                                                                                               @{@"subjectName":@"数学",@"subjectId":@"2"},
-                                                                                               @{@"subjectName":@"外语",@"subjectId":@"3"},
-                                                                                               @{@"subjectName":@"物理",@"subjectId":@"4"},
-                                                                                               @{@"subjectName":@"化学",@"subjectId":@"5"}]];
+#if USE_TEST_DATA
+                [teachersArray addObjectsFromArray:@[                                          @{@"teacherName":@"张荣汉",@"teacherId":@"1",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",},
+                    @{@"teacherName":@"朱丽丽",@"teacherId":@"2",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",},
+                    @{@"teacherName":@"梅小静",@"teacherId":@"3",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",},
+                    @{@"teacherName":@"刘佳佳",@"teacherId":@"4",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",},
+                    @{@"teacherName":@"方梅玉",@"teacherId":@"5",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",},
+                    @{@"teacherName":@"陈家明",@"teacherId":@"6",@"teacherSchool":@"繁昌一中",@"teacherPic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",}
+                                                                                               ]];
+                [subjectsArray addObjectsFromArray:[resultDict objectForKey:@"subjectList"]];
 #else
                 [subjectsArray addObjectsFromArray:[resultDict objectForKey:@"subjectList"]];
                 [teachersArray  addObjectsFromArray:[resultDict objectForKey:@"teacherList"]];
@@ -176,6 +178,32 @@
 -(IBAction)addBtnClicked:(id)sender
 {
     
+}
+#pragma mark - collectionView datasource
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return teachersArray.count;
+}
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary* tmpDict=[teachersArray objectAtIndex:indexPath.row];
+    if(indexPath.section==0)
+    {
+        FollowTeacherCell  *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"FollowTeacherCell" forIndexPath:indexPath];
+        cell.nameLabel.text=[tmpDict objectForKey:@"teacherName"];
+        cell.btnLabel.tag=[[tmpDict objectForKey:@"teacherId"] integerValue];
+        UITapGestureRecognizer* tap=[[UITapGestureRecognizer alloc] initWithTarget:cell action:@selector(btnLabelTapped:)];
+        [cell.btnLabel addGestureRecognizer:tap];
+        [tap release];
+        cell.schoolLabel.text=[tmpDict objectForKey:@"teacherSchool"];
+        [cell.headImageView setImageWithURL:[NSURL URLWithString:[tmpDict objectForKey:@"teacherPic"]] placeholderImage:[UIImage imageNamed:@"teacherHead.png"]];
+        return cell;
+    }
+    return nil;
 }
 - (void)didReceiveMemoryWarning
 {

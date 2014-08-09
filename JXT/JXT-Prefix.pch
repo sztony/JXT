@@ -17,6 +17,7 @@
     #import "GlobalDataManager.h"
     #import "NSString+MD5.h"
     #import "WBHTTPRequest.h"
+    #import "UIImageView+WebCache.h"
 #endif
 
 
@@ -36,5 +37,8 @@
 //本地化key
 #define User_Mobile_Key @"userMobileKey"
 #define User_Password_Key @"userPasswordKey"
+
+//通知
+#define Select_All_Teacher_Notification @"SelectAllTeacherNotification"
 
 

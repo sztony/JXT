@@ -73,14 +73,15 @@
             
             if(!error)
             {
-                //消息检测
                 NSString* msg=[backDataDict objectForKey:@"msg"];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    NSLog(@"%@",msg);
+                    statusLabel.text=msg;
+                });
+                //消息检测
                 if([msg hasPrefix:@"操作成功"])
                 {
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        NSLog(@"%@",msg);
-                        statusLabel.text=msg;
-                    });
+                    
                 }
             }
             else
@@ -125,6 +126,7 @@
         statusLabel.text=@"验证码错误!";
         return;
     }
+     
      
     //保存待注册
     dataCenter.userRealName=nameField.text;
