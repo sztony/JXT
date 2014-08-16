@@ -23,5 +23,9 @@
 @property(nonatomic,retain) NSString* userPhaseId;
 @property(nonatomic,retain) NSString* userPic;
 @property(nonatomic,retain) NSString* userBigPic;
+//课程全局dict
+@property(nonatomic,retain) NSMutableDictionary * subjectsDict;
 
+-(NSArray*)subjectsArray;
+-(NSString*)subjectIdForSubject:(NSString*)aSubject;
 @end

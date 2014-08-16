@@ -38,7 +38,7 @@
     }
     NSString* needString=[string substringToIndex:string.length-1];
     [string release];
-    //NSLog(@"dataString:%@",needString);
+    NSLog(@"dataString:%@",needString);
     return needString;
 }
 @end

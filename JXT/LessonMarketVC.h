@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseVC.h"
+#import "LessonMarketBaseCell.h"
 @interface LessonMarketVC :BaseVC
 
 @end

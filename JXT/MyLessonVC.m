@@ -15,7 +15,7 @@
 @end
 
 @implementation MyLessonVC
-
+@synthesize header1ID,header2ID,header3ID;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +28,10 @@
 {
     [super dataInit];
     //segmentSelectIndexInitValue=1;
+    relativeLessonArray =[[NSMutableArray alloc] initWithCapacity:0];
+    self.header1ID=@"1";
+    self.header2ID=@"1";
+    self.header3ID=@"1";
 }
 - (void)viewDidLoad
 {
@@ -59,28 +63,66 @@
 {
     [self.contentDataArray removeAllObjects];
     
-    
-    //URL
-    NSURL* url=[NSURL URLWithString:[HOST_URL stringByAppendingString:URL_CourseByDate]];
     //参数
     NSMutableDictionary* dict=[[NSMutableDictionary alloc] init];
-    [dict setObject:@"1" forKey:@"userId"];
-    [dict setObject:@"1" forKey:@"subjectId"];
-    [dict setObject:@"3" forKey:@"courseSize"]; //默认3个
-    [dict setObject:@"2014-01-01" forKey:@"courseTime"]; //默认今天 2014-01-01
-    
-    
+    NSString* urlSuffix;
+    if(segmentSelectIndexInitValue==1)
+    {
+        [dict setObject:[dataCenter userID] forKey:@"userId"];
+        if(currentClickedHeader==header1)//今日课程
+        {
+            urlSuffix=URL_CourseByDate;
+            
+            [dict setObject:header1ID forKey:@"subjectId"];
+            [dict setObject:@"3" forKey:@"courseSize"]; //默认3个
+            [dict setObject:@"2014-01-01" forKey:@"courseTime"]; //默认今天 2014-01-01
+        }
+        else if (currentClickedHeader==header2)//今日作业
+        {
+            urlSuffix=URL_HomeWorkByDate;
+            
+            [dict setObject:header2ID forKey:@"subjectId"];
+            [dict setObject:@"2014-01-01" forKey:@"courseTime"]; //默认今天 2014-01-01
+        }
+        else
+        {
+            urlSuffix=URL_Schedule;//课表
+        
+            [dict setObject:@"2014-01-01" forKey:@"beginDate"];
+            //[dict setObject:@"3" forKey:@"courseSize"]; //默认3个
+            [dict setObject:@"2014-01-03" forKey:@"endDate"]; //默认今天 2014-01-01
+        }
+    }
+    else
+    {
+        urlSuffix=URL_MyCourseList;
+        [dict setObject:[dataCenter userID] forKey:@"userId"];
+        [dict setObject:header3ID forKey:@"subjectId"];
+        [dict setObject:header1ID forKey:@"courseType"];
+        [dict setObject:header2ID forKey:@"courseStatus"];
+        
+    }
+
+    //URL
+    NSURL* url=[NSURL URLWithString:[HOST_URL stringByAppendingString:urlSuffix]];
+
     //请求
     [WBHTTPRequest sendRequestWithURL:url parameterDict:dict type:kWBHTTPRequestPOSTType  queue:[dataCenter globalTaskQueue] completeHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
         NSLog(@"error:%@",connectionError);
         NSLog(@"data:%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         
-        //成功
-        if(!connectionError)
+        //失败
+        if(connectionError)
         {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"连接错误:%@",connectionError);
+                return ;
+            });
+        }
             NSError* error=nil;
             NSDictionary * dict=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
             NSLog(@"dict:%@",dict);
+            
             if(!error)
             {
 #if USE_TEST_DATA
@@ -97,10 +139,14 @@
                     }
                     else
                     {
-                        [self.contentDataArray addObject:@{@"title":@"数学讲义",@"teacher":@"牛老师",@"image":@"math.png",@"time":@"20分钟"}];
+                        NSString* idString=[NSString stringWithFormat:@"%d",i+1];
+                        [self.contentDataArray addObject:@{@"courseId":idString,@"courseName":@"数学讲义",@"teacherName":@"牛老师",@"coursePic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg",@"courseLength":@"20分钟",@"filePath":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg"}];
                     }
                 }
                 NSLog(@"contentArray:%@",self.contentDataArray);
+                [relativeLessonArray addObject:@{@"courseId":@"1",@"courseName":@"函数",@"coursePic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg"}];
+                [relativeLessonArray addObject:@{@"courseId":@"2",@"courseName":@"公式",@"coursePic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg"}];
+                [relativeLessonArray addObject:@{@"courseId":@"3",@"courseName":@"数学",@"coursePic":@"http://223.71.208.118:8180/jxt_files/common/teacherDefaultPic.jpg"}];
 #else
                 //操作成功与否检测
                 BOOL status=[[dict valueForKey:@"success"] boolValue];
@@ -127,30 +173,25 @@
                     
                     //显示数据
                     [contentTableView reloadData];
+                    [footerView reloadData];
+                    if(segmentSelectIndexInitValue==1)
+                    {
+                        if(currentClickedHeader==header1)
+                        {
+                            footerView.hidden=NO;
+                        }
+                        else
+                            footerView.hidden=YES;
+                    }
+                    else
+                        footerView.hidden=YES;
                 });
             }
             else
             {
                 NSLog(@"login parse error:%@",error);
             }
-            
-        }
-        else
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                NSLog(@"连接错误:%@",connectionError);
-            });
-        }
-        
-        
-        
     }];
-    
-    
-    
-    
-    
-   
 }
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -170,6 +211,9 @@
 {
     [super WBSegment:segment DidSelectedItemIndex:index];
     segmentSelectIndexInitValue=aSegment.currentSelectedIndex;
+    self.header1ID=@"1";
+    self.header2ID=@"1";
+    self.header3ID=@"1";
     if(index==1)
     {
         [self.headerTitleArray removeAllObjects];
@@ -181,7 +225,7 @@
     else
     {
         [self.headerTitleArray removeAllObjects];
-        [self.headerTitleArray addObject:@"全部课程"];
+        [self.headerTitleArray addObject:@"视频课程"];
         [self.headerTitleArray addObject:@"未听课程"];
         [self.headerTitleArray addObject:@"数学"];
         [self refreshHeader];
@@ -194,14 +238,14 @@
 {
     [super headerClicked:aHeader];
     NSArray* array;
+    
     if(segment.currentSelectedIndex==1)
     {
         switch (aHeader.tag) {
             case 1:
-                array=@[@"语文",@"数学",@"外语",@"政治",@"历史",@"物理",@"化学",@"生物",@"地里"];
-                break;
+                
             case 2:
-                array=@[@"语文",@"数学",@"外语",@"政治",@"历史",@"物理",@"化学",@"生物",@"地里"];
+                array=[dataCenter subjectsArray];
                 break;
             default:
                 array=@[@""];
@@ -212,13 +256,13 @@
     {
         switch (aHeader.tag) {
             case 1:
-                array=@[@"item1",@"item2",@"item3"];
+                array=@[@"视频课程",@"文本课程",];
                 break;
             case 2:
-                array=@[@"item11",@"item22",@"item33"];
+                array=@[@"未听课程",@"已听课程"];
                 break;
             default:
-                array=@[@"item111",@"item222",@"item333"];
+                array=[dataCenter subjectsArray];
                 break;
         }
     }
@@ -226,15 +270,45 @@
     [self.currentCombListItemArray  removeAllObjects];
     [self.currentCombListItemArray addObjectsFromArray:array];
     //显示
-    [WBCombList  showInRect:CGRectMake(aHeader.frame.origin.x,aHeader.frame.origin.y+aHeader.bounds.size.height,aHeader.bounds.size.width, 300) edgeInset:UIEdgeInsetsMake(3, 3, 3, 3) delegate:self inView:self.view withTag:2];
+    [WBCombList  showInRect:CGRectMake(aHeader.frame.origin.x,aHeader.frame.origin.y+aHeader.bounds.size.height,aHeader.bounds.size.width, 300) edgeInset:UIEdgeInsetsMake(3, 3, 3, 3) delegate:self inView:self.view withTag:aHeader.tag];
 }
 //复写combList代理
 -(void)combList:(WBCombList *)aCombList SelectedIndexPath:(NSIndexPath *)aIndexPath
 
 {
     [super combList:aCombList SelectedIndexPath:aIndexPath];
-    [currentClickedHeader setTitle:[self.currentCombListItemArray objectAtIndex:aIndexPath.row] forState:UIControlStateNormal];
-    
+    NSString* clickedTitle=[self.currentCombListItemArray objectAtIndex:aIndexPath.row];
+    [currentClickedHeader setTitle:clickedTitle forState:UIControlStateNormal];
+    if(segmentSelectIndexInitValue==1)
+    {
+        if(aCombList.tag==1)
+        {
+            self.header1ID=[dataCenter subjectIdForSubject:clickedTitle];
+        }
+        else if(aCombList.tag==2)
+        {
+             self.header2ID=[dataCenter subjectIdForSubject:clickedTitle];
+        }
+        else
+        {
+            
+        }
+    }
+    else
+    {
+        if(aCombList.tag==1)
+        {
+           self.header1ID=[NSString stringWithFormat:@"%d",aIndexPath.row+1];
+        }
+        else if(aCombList.tag==2)
+        {
+            self.header2ID=[NSString stringWithFormat:@"%d",aIndexPath.row+1];
+        }
+        else
+        {
+            self.header3ID=[dataCenter subjectIdForSubject:clickedTitle];
+        }
+    }
     
     //更新数据
     [self loadTableContent];
@@ -260,6 +334,47 @@
     }
     return self.currentCombListItemArray.count;
 }
+//今日课程相关课程footerView
+/*
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if(segmentSelectIndexInitValue==1&&currentClickedHeader==header1&&tableView.tag==TAG_ContentTable)
+    {
+        return 84;
+    }
+    return 0;
+}
+-(UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if(segmentSelectIndexInitValue==1&&currentClickedHeader==header1&&tableView.tag==TAG_ContentTable)
+    {
+        UICollectionView* footerView=[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:
+    }
+}
+ */
+#pragma mark - collectionView datasource
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return relativeLessonArray.count;
+}
+-(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary* tmpDict=[relativeLessonArray objectAtIndex:indexPath.row];
+    if(indexPath.section==0)
+    {
+        RelativeLessonCell  *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"RelativeLessonCell" forIndexPath:indexPath];
+        cell.subjectName.text =[tmpDict objectForKey:@"courseName"];
+        cell.tag=[[tmpDict objectForKey:@"courseId"] integerValue];
+        [cell.subjectImageView setImageWithURL:[NSURL URLWithString:[tmpDict objectForKey:@"coursePic"]] placeholderImage:[UIImage imageNamed:@"teacherHead.png"]];
+        return cell;
+    }
+    return nil;
+}
+//今日作业HeaderView
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     
@@ -306,12 +421,20 @@
         }
         else
         {
-            MyLessonCustomCell* cell=[tableView dequeueReusableCellWithIdentifier:@"MyLessonCell"];
+            BOOL isVideo= [header1ID isEqualToString:@"1"]?YES:NO;
+            MyLessonBaseCell* cell=[tableView dequeueReusableCellWithIdentifier:isVideo? @"MyLessonVideoCell":@"MyLessonTextCell"];
             NSDictionary* tmpDict=[self.contentDataArray objectAtIndex:indexPath.row];
-            cell.subjectTitle.text=[tmpDict objectForKey:@"title"];
-            cell.subjectTeacher.text=[tmpDict objectForKey:@"teacher"];
-            cell.subjectTime.text=[tmpDict objectForKey:@"time"];
-            cell.subjectImage.image=[UIImage imageNamed:[tmpDict objectForKey:@"image"]];
+            cell.subjectTitle.text=[tmpDict objectForKey:@"courseName"];
+            cell.subjectTeacher.text=[tmpDict objectForKey:@"teacherName"];
+            [cell.subjectImage setImageWithURL:[NSURL URLWithString:[tmpDict objectForKey:@"coursePic"] ] placeholderImage:[UIImage imageNamed:@"math.png"]];
+            if(isVideo)
+            {
+                ((MyLessonVideoCell*)cell).subjectTime.text=[tmpDict objectForKey:@"courseLength"];
+            }
+            else
+            {
+                [((MyLessonTextCell*)cell).downloadBtn setTitle:[tmpDict objectForKey:@"filePath"] forState:UIControlStateNormal];
+            }
             return cell;
         }
         
@@ -334,6 +457,7 @@
 }
 -(void)dealloc
 {
+    [relativeLessonArray release];
     [super dealloc];
 }
 /*

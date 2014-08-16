@@ -1,16 +1,16 @@
 //
-//  MyLessonCustomCell.m
+//  MyLessonBaseCell.m
 //  JXT
 //
-//  Created by 伍 兵 on 14-8-2.
+//  Created by 伍 兵 on 14-8-10.
 //  Copyright (c) 2014年 伍 兵. All rights reserved.
 //
 
-#import "MyLessonCustomCell.h"
+#import "MyLessonBaseCell.h"
 
-@implementation MyLessonCustomCell
+@implementation MyLessonBaseCell
 @synthesize subjectImage;
-@synthesize subjectTitle,subjectTeacher,subjectTime;
+@synthesize subjectTitle,subjectTeacher;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -24,7 +24,13 @@
 {
     // Initialization code
 }
-
+-(void)dealloc
+{
+    [subjectImage release];
+    [subjectTeacher release];
+    [subjectTitle release];
+    [super dealloc];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
